@@ -127,35 +127,34 @@
 
     <section id="refund">
       <h2>✅ Refund Policy</h2>
-      <p>Try RizzosAI risk-free. If you’re not thrilled within 30 days, you’ll get a full refund <em>minus</
+      <p>Try RizzosAI risk-free. If you’re not thrilled within 30 days, you’ll get a full refund <em>minus</em> the $18 AUD domain registration fee. That domain is yours to keep either way.</p>
     </section>
 
     <footer>
       <p>&copy; 2025 RizzosAI. Built for creators, marketers, and hands-free empire builders.</p>
     </footer>
   </div>
-<script>
-  var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
 
-  var priceIds = {
-    49: 'prod_TAxWgfLWOufJbY',
-    99: 'prod_TAxZqbYBp2yBaZ',
-    249: 'prod_TAxahdhnXjwnsB'
-  };
+  <script>
+    var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
 
-  function selectPackage(amount) {
-    var price = priceIds[amount];
-    if (!price) {
-      alert('Invalid package selected.');
-      return;
+    var priceIds = {
+      49: 'price_1SEbdZIcky1EcVjw3z3ZzZ3u',     // Starter Access – $49 AUD
+      99: 'price_1SEbeQIcky1EcVjw7v7v7v7v',     // Pro Builder Access – $99 AUD
+      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'     // Empire Mode Access – $249 AUD
+    };
+
+    function selectPackage(amount) {
+      var price = priceIds[amount];
+      if (!price) {
+        alert('Invalid package selected.');
+        return;
+      }
+
+      stripe.redirectToCheckout({
+        lineItems: [{ price: price, quantity: 1 }],
+        mode: 'payment',
+        successUrl: 'https://rizzosai.com/checkout-success',
+        cancelUrl: 'https://rizzosai.com/checkout-cancel'
+      });
     }
-
-    stripe.redirectToCheckout({
-      lineItems: [{ price: price, quantity: 1 }],
-      mode: 'payment',
-      successUrl: 'https://rizzosai.com/checkout-success',
-      cancelUrl: 'https://rizzosai.com/checkout-cancel'
-    });
-  }
-</script>
-
