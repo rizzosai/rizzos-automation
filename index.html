@@ -146,4 +146,18 @@
 
     function selectPackage(amount) {
       var price = priceIds[amount];
-      if (!price
+      if (!price) {
+        alert('Invalid package selected.');
+        return;
+      }
+
+      stripe.redirectToCheckout({
+        lineItems: [{ price: price, quantity: 1 }],
+        mode: 'payment',
+        successUrl: 'https://rizzosai.com/checkout-success',
+        cancelUrl: 'https://rizzosai.com/checkout-cancel'
+      });
+    }
+  </script>
+</body>
+</html>
