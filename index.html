@@ -85,13 +85,13 @@
       <h2>💸 Choose Your Package</h2>
       <div class="package-grid">
         <div class="package-box">
-          <h3>Starter Access – $29 AUD</h3>
+          <h3>Starter Access – $49 AUD</h3>
           <ul>
             <li>Affiliate dashboard</li>
             <li>AI onboarding bot</li>
             <li>1-level commissions</li>
           </ul>
-          <button onclick="selectPackage(29)">Buy Starter</button>
+          <button onclick="selectPackage(49)">Buy Starter</button>
         </div>
         <div class="package-box">
           <h3>Pro Builder Access – $99 AUD</h3>
@@ -103,13 +103,13 @@
           <button onclick="selectPackage(99)">Buy Pro Builder</button>
         </div>
         <div class="package-box">
-          <h3>Empire Mode Access – $250 AUD</h3>
+          <h3>Empire Mode Access – $249 AUD</h3>
           <ul>
             <li>Everything in Pro Builder</li>
             <li>Custom branding</li>
             <li>Cinematic video + coaching</li>
           </ul>
-          <button onclick="selectPackage(250)">Buy Empire Mode</button>
+          <button onclick="selectPackage(249)">Buy Empire Mode</button>
         </div>
       </div>
     </section>
@@ -139,25 +139,11 @@
     var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
 
     var priceIds = {
-      29: 'price_1StarterID...',     // Replace with actual Stripe Price ID
-      99: 'price_1ProBuilderID...',  // Replace with actual Stripe Price ID
-      250: 'price_1EmpireID...'      // Replace with actual Stripe Price ID
+      49: 'price_1SEbdZIcky1EcVjw3z3ZzZ3u',     // Starter Access – $49 AUD
+      99: 'price_1SEbeQIcky1EcVjw7v7v7v7v',     // Pro Builder Access – $99 AUD
+      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'     // Empire Mode Access – $249 AUD
     };
 
     function selectPackage(amount) {
       var price = priceIds[amount];
-      if (!price) {
-        alert('Invalid package selected.');
-        return;
-      }
-
-      stripe.redirectToCheckout({
-        lineItems: [{ price: price, quantity: 1 }],
-        mode: 'payment',
-        successUrl: 'https://rizzosai.com/checkout-success',
-        cancelUrl: 'https://rizzosai.com/checkout-cancel'
-      });
-    }
-  </script>
-</body>
-</html>
+      if (!price
