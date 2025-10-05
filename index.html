@@ -172,13 +172,33 @@
     <h2>Ready to Glow?</h2>
     <button>Join Now & Start Earning</button>
   </div>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
 
-  <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
+    const priceIds = {
+      49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
+      99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
+      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'
+    };
 
-      const priceIds = {
-        49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
-        99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
-        249: 'price_1SEbfSIcky1EcVjwzLaoq
+    function selectPackage(amount) {
+      const price = priceIds[amount];
+      if (!price) return alert('Invalid package');
+
+      stripe.redirectToCheckout({
+        lineItems: [{ price, quantity: 1 }],
+        mode: 'subscription',
+        successUrl: 'https://checkout.rizzosai.com/checkout-success.html',
+        cancelUrl: 'https://checkout.rizzosai.com/checkout-cancel.html',
+        ...(window.Rewardful?.referral && { clientReferenceId: window.Rewardful.referral })
+      });
+    }
+
+    document.querySelector('[data-package="49"]').onclick = () => selectPackage(49);
+    document.querySelector('[data-package="99"]').onclick = () => selectPackage(99);
+    document.querySelector('[data-package="249"]').onclick = () => selectPackage(249);
+  });
+</script>
+
