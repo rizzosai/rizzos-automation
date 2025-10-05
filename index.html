@@ -150,39 +150,44 @@
     <h2>Community Chat Room & 24/7 AI Support</h2>
     <p>Our exclusive chat room is open to all members—talk about your wins, your struggles, or just hang out. No bars, no limits, just real talk. And if you need help, our AI chatbot is always online to answer your questions, so you can focus on growing (and relaxing) while the community and automation do the work!</p>
   </div>
-<script src="https://js.stripe.com/v3/"></script>
 <script>
-  const stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
+  document.addEventListener("DOMContentLoaded", function () {
+    const stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
 
-  const priceIds = {
-    49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',   // Starter
-    99: 'price_1SEbeAIcky1EcVjwrkyybGBC',  // Intermediate
-    249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'  // Advanced
-  };
-
-  const mode = 'subscription';
-
-  function selectPackage(amount) {
-    const price = priceIds[amount];
-    if (!price) {
-      alert('Please select a valid package.');
-      return;
-    }
-
-    const checkoutParams = {
-      lineItems: [{ price: price, quantity: 1 }],
-      mode: mode,
-      successUrl: 'https://nzzosa8i.com/checkout-success.html',
-      cancelUrl: 'https://nzzosa8i.com/checkout-cancel.html'
+    const priceIds = {
+      49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
+      99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
+      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'
     };
 
-    if (window.Rewardful && window.Rewardful.referral) {
-      checkoutParams.clientReferenceId = window.Rewardful.referral;
+    function selectPackage(amount) {
+      const price = priceIds[amount];
+      if (!price) {
+        alert('Please select a valid package.');
+        return;
+      }
+
+      const checkoutParams = {
+        lineItems: [{ price: price, quantity: 1 }],
+        mode: 'subscription',
+        successUrl: 'https://nzzosa8i.com/checkout-success.html',
+        cancelUrl: 'https://nzzosa8i.com/checkout-cancel.html'
+      };
+
+      if (window.Rewardful && window.Rewardful.referral) {
+        checkoutParams.clientReferenceId = window.Rewardful.referral;
+      }
+
+      stripe.redirectToCheckout(checkoutParams);
     }
 
-    stripe.redirectToCheckout(checkoutParams);
-  }
+    // Attach click handlers
+    document.querySelector('[data-package="49"]').addEventListener('click', () => selectPackage(49));
+    document.querySelector('[data-package="99"]').addEventListener('click', () => selectPackage(99));
+    document.querySelector('[data-package="249"]').addEventListener('click', () => selectPackage(249));
+  });
 </script>
+
 
 <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #6c6;">
     <h2 style="color:#228B22;">100% Money-Back Guarantee</h2>
