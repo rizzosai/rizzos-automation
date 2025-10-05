@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,38 +142,15 @@
       </ul>
       <button onclick="selectPackage(249)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Advanced</button>
     </div>
-    <div class="package-box" style="background:#e3e8ee; border:2px solid #b8c7d1; border-radius:12px; padding:2rem 1.5rem; min-width:260px; max-width:320px; flex:1 1 260px; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-      <h3>$1000/mo Pro/Elite</h3>
-      <ul style="text-align:left;">
-        <li>Everything in Advanced</li>
-        <li>Full "How I Automated My Business with AI" Guide</li>
-        <li>1-on-1 coaching with Rizzo</li>
-        <li>VIP mastermind group access</li>
-      </ul>
-      <button onclick="selectPackage(1000)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Pro/Elite</button>
-    </div>
-    <div class="package-box" style="background:#e3e8ee; border:2px solid #b8c7d1; border-radius:12px; padding:2rem 1.5rem; min-width:260px; max-width:320px; flex:1 1 260px; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-      <h3>$5000/mo Whale/Ultimate</h3>
-      <ul style="text-align:left;">
-        <li>Everything in Pro/Elite</li>
-        <li>Done-for-you AI automations (custom setup)</li>
-        <li>Personal business growth plan</li>
-        <li>Direct line to Rizzo (yes, really!)</li>
-        <li>And if you find the kitchen sink, let me know—I’ll throw it in too!</li>
-      </ul>
-      <button onclick="selectPackage(5000)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Whale/Ultimate</button>
-    </div>
   </div>
   <script src="https://js.stripe.com/v3/"></script>
   <script>
     // Stripe integration with real publishable key and price IDs
     var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
     var priceIds = {
-      49: 'prod_TAxWgfLWOufJbY', // $49/mo
-      99: 'prod_TAxZqbYBp2yBaZ', // $99/mo
-      249: 'prod_TAxahdhnXjwnsB', // $249/mo
-      1000: 'price_id_for_1000', // placeholder for $1000/mo
-      5000: 'price_id_for_5000'  // placeholder for $5000/mo
+      49: 'price_1SEbbhIcky1EcVjweMBiMjNJ', // $49/mo
+      99: 'price_1SEbeAIcky1EcVjwrkyybGBC', // $99/mo
+      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X' // $249/mo
     };
     var mode = 'subscription';
     function selectPackage(amount) {
