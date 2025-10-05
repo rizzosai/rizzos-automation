@@ -160,7 +160,7 @@
     249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'  // Advanced
   };
 
-  const mode = 'subscription'; // Monthly plans
+  const mode = 'subscription';
 
   function selectPackage(amount) {
     const price = priceIds[amount];
@@ -172,11 +172,10 @@
     const checkoutParams = {
       lineItems: [{ price: price, quantity: 1 }],
       mode: mode,
-      successUrl: 'https://rizzosai.com/checkout-success.html',
-      cancelUrl: 'https://rizzosai.com/checkout-cancel.html'
+      successUrl: 'https://nzzosa8i.com/checkout-success.html',
+      cancelUrl: 'https://nzzosa8i.com/checkout-cancel.html'
     };
 
-    // Optional: Rewardful referral tracking
     if (window.Rewardful && window.Rewardful.referral) {
       checkoutParams.clientReferenceId = window.Rewardful.referral;
     }
@@ -184,6 +183,7 @@
     stripe.redirectToCheckout(checkoutParams);
   }
 </script>
+
 <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #6c6;">
     <h2 style="color:#228B22;">100% Money-Back Guarantee</h2>
     <p>Try Rizzo’s Riches risk-free! If you’re not absolutely thrilled with your website, keyword plan, or the community, just let us know within 30 days and you’ll get a full refund. No questions asked, no hard feelings. That’s how confident we are in the value you’ll get!</p>
