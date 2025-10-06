@@ -1,203 +1,390 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rizzo's Gift Explosion - Laugh & Profit!</title>
-  <style>
-    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6fa; }
-  .hero { background: linear-gradient(120deg, #232f3e 0%, #3a5068 100%); color: #fff; padding: 4.5rem 1rem 2.5rem 1rem; text-align: center; position: relative; min-height: 340px; }
-  .hero h1 { font-size: 2.2rem; margin-bottom: 0.7rem; }
-  .hero h2 { font-size: 1.25rem; margin-bottom: 1.2rem; color: #b8c7d1; }
-    .hero .badges { margin: 1.5rem 0; }
-    .badge { display: inline-block; background: #b8c7d1; color: #232f3e; border-radius: 20px; padding: 0.5rem 1.2rem; margin: 0 0.3rem; font-weight: bold; font-size: 1rem; box-shadow: 0 2px 8px rgba(35,47,62,0.10); }
-    .timer { font-size: 1.1rem; background: #e3e8ee; color: #232f3e; display: inline-block; padding: 0.5rem 1rem; border-radius: 8px; margin-top: 1rem; }
-    .story, .cta, .gifts, .testimonial { max-width: 800px; margin: 2rem auto; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 24px rgba(35,47,62,0.08); }
-    .story h2, .gifts h2, .cta h2, .testimonial h2 { color: #232f3e; }
-    .story p { font-size: 1.1rem; margin-bottom: 1.2rem; }
-    .laugh { color: #3a5068; font-weight: bold; }
-    .gifts-list { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin: 2rem 0; }
-    .gift-item { background: #e3e8ee; border: 2px solid #b8c7d1; border-radius: 8px; padding: 1rem 1.5rem; min-width: 180px; text-align: center; font-weight: bold; box-shadow: 0 2px 8px rgba(35,47,62,0.06); }
-    .gift-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
-    .cta { text-align: center; }
-    .cta button { background: linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color: #fff; border: none; border-radius: 6px; padding: 1.2rem 3rem; font-size: 1.3rem; cursor: pointer; margin-top: 1.5rem; font-weight: bold; box-shadow: 0 2px 8px rgba(35,47,62,0.18); transition: background 0.2s; }
-    .cta button:hover { background: #3a5068; color: #b8c7d1; }
-    .testimonial { text-align: center; font-style: italic; color: #444; }
-    .testimonial .author { margin-top: 1rem; font-weight: bold; color: #232f3e; }
-    .as-seen { text-align: center; margin: 2rem 0; }
-    .as-seen img { height: 32px; margin: 0 0.7rem; opacity: 0.7; }
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.5rem; }
-      .story, .cta, .gifts, .testimonial { padding: 1rem; }
-      .gifts-list { flex-direction: column; align-items: center; }
-    }
-  </style>
-  <script>
-    // Simple countdown timer for urgency
-    window.onload = function() {
-      var timer = document.getElementById('timer');
-      var seconds = 900; // 15 minutes
-      function updateTimer() {
-        var min = Math.floor(seconds / 60);
-        var sec = seconds % 60;
-        timer.textContent = 'Special bonus expires in: ' + min + 'm ' + (sec < 10 ? '0' : '') + sec + 's';
-        if (seconds > 0) { seconds--; setTimeout(updateTimer, 1000); }
-        else { timer.textContent = 'Bonus expired!'; }
-      }
-      updateTimer();
-    };
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzos Riches Affiliate Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            color: #d7263d;
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            text-align: center;
+        }
+        .claim {
+            font-size: 1.3em;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 1.2em;
+            text-align: center;
+        }
+        .commission {
+            background: #fbeee0;
+            border-left: 6px solid #d7263d;
+            padding: 18px 20px;
+            margin-bottom: 1.5em;
+            font-size: 1.1em;
+        .cta {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0 1em 0;
+        }
+        .stripe-btn {
+            background: #635bff;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 16px 36px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .stripe-btn:hover {
+            background: #4b42d7;
+        }
+        .features {
+            margin-top: 2em;
+        }
+        .features li {
+            margin-bottom: 0.7em;
+            font-size: 1.05em;
+        }
+    </style>
+<head>
+    <body>
+        <div class="container">
+            <h1>Rizzos Riches Affiliate Store</h1>
+            <div class="claim">The <span style="color:#d7263d;">#1 Affiliate Program</span> on the Internet!<br>
+            Earn up to <span style="color:#d7263d;">80% commission</span> with our unique 2-tier payout structure.</div>
+            <div class="commission">
+                <strong>How it works:</strong><br>
+                <ul>
+                    <li><b>70% commission</b> on every sale you refer directly</li>
+                    <li><b>10% commission</b> on every sale made by your direct referrals (your downline)</li>
+                </ul>
+                <em>Get paid instantly via Stripe. Build your team, grow your earnings!</em>
+            </div>
+            <div class="cta">
+                <!-- Replace the link below with your real Stripe payment link -->
+                <a href="https://buy.stripe.com/test_1234567890" target="_blank">
+                    <button class="stripe-btn">Join Now with Stripe</button>
+                </a>
+            </div>
+            <ul class="features">
+                <li>Instant affiliate approval – start earning today</li>
+                <li>Real-time dashboard to track your sales and downline</li>
+                <li>Automated 2-tier commission payouts</li>
+                <li>Easy-to-use referral links</li>
+                <li>Dedicated support for all affiliates</li>
+            </ul>
+        </div>
+    </div>
+    </body>
+    </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rizzo's Riches Affiliate Store</title>
+    <style>
+        body {
+            background: #f4f6fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #232f3e 0%, #3a5068 100%);
+            color: #fff;
+            padding: 4rem 1rem 2rem 1rem;
+            text-align: center;
+            min-height: 320px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            color: #b8c7d1;
+        }
+
+        .badges {
+            margin: 1.5rem 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #b8c7d1;
+            color: #232f3e;
+            border-radius: 20px;
+            padding: 0.5rem 1.2rem;
+            margin: 0 0.3rem;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(35, 47, 62, 0.10);
+        }
+
+        .store-section {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(35, 47, 62, 0.08);
+        }
+
+        .store-section h2 {
+            color: #232f3e;
+            margin-bottom: 1.2rem;
+        }
+
+        .program-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .program-card {
+            background: #e3e8ee;
+            border: 2px solid #b8c7d1;
+            border-radius: 10px;
+            padding: 1.5rem 1.2rem;
+            min-width: 260px;
+            max-width: 320px;
+            flex: 1 1 260px;
+            box-shadow: 0 2px 8px rgba(35, 47, 62, 0.10);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .program-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #232f3e;
+            font-size: 1.2rem;
+        }
+
+        .program-card p {
+            color: #444;
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .program-card a {
+            background: #232f3e;
+            color: #fff;
+            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: auto;
+            transition: background 0.2s;
+        }
+
+        .program-card a:hover {
+            background: #3a5068;
+        }
+
+        .cta-section {
+            background: #e3ffe3;
+            border: 2px solid #6c6;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            margin: 2.5rem auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(34, 139, 34, 0.08);
+        }
+
+        .cta-section h2 {
+            color: #228B22;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #444;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-section .big-btn {
+            background: linear-gradient(90deg, #232f3e 0%, #3a5068 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 1.2rem 3rem;
+            font-size: 1.3rem;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(35, 47, 62, 0.18);
+            margin-top: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .cta-section .big-btn:hover {
+            background: #3a5068;
+            color: #b8c7d1;
+        }
+
+        .guarantee {
+            background: #fff7e6;
+            border: 2px solid #ffa500;
+            border-radius: 12px;
+            padding: 1.5rem 1.2rem;
+            margin: 2.5rem auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(255, 168, 0, 0.08);
+        }
+
+        .guarantee h2 {
+            color: #ff8800;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee p {
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 700px) {
+            .program-list {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            .store-section {
+                padding: 1.2rem 0.5rem;
+            }
+
+            .program-card {
+                min-width: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="hero">
-  <h1>Welcome to Rizzo's Riches Community!</h1>
-  <h2>Where Even the Little Fish Can Swim (But Watch Out for the Sharks!)</h2>
-    <div class="badges">
-  <span class="badge">Affiliate-Only Access</span>
-  <span class="badge">2-Tier Commissions: 70% + 15%</span>
-  <span class="badge">We Get You Your First 2 Signups—Guaranteed!</span>
+    <div class="hero">
+        <h1>Rizzo's Riches Affiliate Store</h1>
+        <h2>Bring your favorite affiliate programs to Rizzo's Riches and unlock 2-tier commissions!<br>
+            <span style="color:#fff; background:#228B22; border-radius:8px; padding:0.2em 0.7em; font-weight:bold;">70%
+                for your direct signups, 10% for your second tier</span>
+        </h2>
+        <div style="margin:1.5rem auto 0 auto; max-width:700px;">
+            <div
+                style="background:#ffeb3b; color:#232f3e; border-radius:10px; padding:1.1rem 1.5rem; font-size:1.25rem; font-weight:bold; box-shadow:0 2px 8px rgba(255,235,59,0.12); border:2px solid #ffd600;">
+                <span style="font-size:1.4rem;">🔥</span> <span style="color:#d32f2f;">The Best Affiliate Program on the
+                    Internet!</span> <span style="font-size:1.4rem;">🔥</span><br>
+                No one else pays you 70% on your direct signups <b>and</b> 10% on your second tier—plus you can bring
+                your own programs!<br>
+                <span style="font-size:1.05rem; color:#444;">Join the only platform where you get paid for building a
+                    team and bringing your favorite affiliate offers.</span>
+            </div>
+        </div>
+        <div class="badges">
+            <span class="badge">2-Tier Commissions: 70% + 10%</span>
+            <span class="badge">Bring Your Own Affiliate Programs</span>
+            <span class="badge">Grow Your Earnings—Exponentially!</span>
+        </div>
     </div>
-  <div style="font-size:1.1rem; margin:1.5rem 0; background:#e3e8ee; color:#232f3e; display:inline-block; padding:0.7rem 1.5rem; border-radius:8px; font-weight:bold;">
-    No outsiders—only those invited by a member can join. Whether you’re a minnow or a whale, you’re welcome in the Rizzo’s pond. Here’s the kicker: <b>we guarantee your first 2 signups</b> by advertising your unique link on Facebook, LinkedIn, Twitter, Instagram, and Reddit until you get them—no effort needed!<br><br>
-    Our pages get <b>over 500,000 views a month</b>, so your link will be seen by thousands. After that, you earn <b>70% commission on your direct signups</b> (Tier 1) and <b>15% on their signups</b> (Tier 2).<br><br>
-    Plus, there’s a one-time $10 admin fee (just once, to keep the lights on—promise, not every month). Real community, real rewards, and just a dash of envy from the sidelines.
-  </div>
-    <div class="timer" id="timer">Special bonus expires in: 15m 00s</div>
-  </div>
-  <div class="as-seen">
-    <span>As seen on:</span>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/YouTube_social_white_squircle.svg" alt="YouTube" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" alt="Google" />
-  </div>
-  <div class="story">
-  <h2>Why Go It Alone? Join the Rizzo's Riches Movement!</h2>
-  <p>Ever tried to make money online by yourself? It’s like selling invisible socks—nobody sees you, and nobody buys! <span class="laugh">(That’s 1!)</span></p>
-  <p>But what if you had a whole crew behind you, sharing your site on Facebook, Twitter, YouTube, Instagram, Pinterest, and more? Suddenly, you’re everywhere! <span class="laugh">(That’s 2!)</span></p>
-  <p>At Rizzo’s Riches, we’re building a real community. Whether you’re just dipping your toes in or ready to cannonball, there’s a package for every size and ambition. The little people can get in, but don’t be surprised if you find yourself growing fins and a taste for bigger fish. And let’s be honest: I only take a sliver off the top—just enough to keep the servers humming and my coffee cup full. (If you think that’s unfair, remember: even GitHub takes a cut, and they didn’t come up with this idea!)</p>
-  <p>This isn’t like your grandma up at midnight tweeting “I’m a hore” to everybody—this is fun-loving stuff, like waking up every morning and singing, “I got cash in my bank, dada!”</p>
-  <p>Stick with us, and together we’ll build something so big, people will be itching to give us their lunch money just to join the party. (Seriously, I’ve seen it happen. Bring snacks.)</p>
-  <p>So, if you want to laugh, learn, and get seen by thousands, Rizzo’s Riches is your new home. Let’s make magic happen—together! <span class="laugh">(That’s 5!)</span></p>
-  </div>
-  <div class="testimonial">
-    <h2>What People Are Saying</h2>
-    <p>“I laughed so hard, I nearly dropped my phone. And then I made my first $100 online—thanks, Rizzo!”</p>
-    <div class="author">— Jamie L., Happy Customer</div>
-  </div>
-  <div class="gifts">
-    <h2>What You Get as a Rizzo’s Riches Member</h2>
-    <div class="gifts-list">
-    <div class="gift-item"><span class="gift-icon">🎁</span>Exclusive eBook: Real Ways to Make Money Online</div>
-    <div class="gift-item"><span class="gift-icon">💡</span>Affiliate Marketing Cheat Sheet</div>
-    <div class="gift-item"><span class="gift-icon">🛠️</span>Top 10 Passive Income Tools</div>
-    <div class="gift-item"><span class="gift-icon">🌐</span>Automated Simple Website Built For You (with your name & niche!)</div>
-    <div class="gift-item"><span class="gift-icon">�</span>Personalized Keyword Research & SEO Plan</div>
-    <div class="gift-item"><span class="gift-icon">📝</span>Step-by-step Notepad Instructions for Growing Your Site</div>
-    <div class="gift-item"><span class="gift-icon">�🔒</span>Bonus: Secret Resource Vault</div>
-    <div class="gift-item"><span class="gift-icon">🌐</span>Your website featured on all my social media & site</div>
-    <div class="gift-item"><span class="gift-icon">🤝</span>Community support & ongoing training</div>
-  <div class="gift-item"><span class="gift-icon">💸</span>Earn 70% on your direct signups (Tier 1) and 15% on their signups (Tier 2)</div>
-    <div class="gift-item"><span class="gift-icon">🔗</span>Access to our exclusive, members-only chat room</div>
-    <div class="gift-item"><span class="gift-icon">🤖</span>24/7 AI Chatbot for instant help—no waiting for support!</div>
-    <div class="gift-item"><span class="gift-icon">🚀</span>For $1000 & $5000 Tiers: Full "How I Automated My Business with AI" Guide + 1-on-1 Coaching</div>
-    <div class="gift-item"><span class="gift-icon">🎉</span>And more surprises from Rizzo!</div>
+    <div class="store-section">
+        <h2>How It Works</h2>
+        <p>Welcome to the <b>Rizzo's Riches Affiliate Store</b>—the only place where you can bring <u>your</u> favorite
+            affiliate programs and get rewarded with <b>2-tier commissions</b>!<br><br>
+            <b>Here's the deal:</b> If you bring an affiliate program to Rizzo's Riches, you'll get <b>70%
+                commission</b> on your direct signups (Tier 1) and <b>10% on their signups</b> (Tier 2).<br>
+            That means you earn not just from your own hustle, but from the success of your team. The more you share,
+            the more you grow—it's like affiliate marketing on rocket fuel.<br><br>
+            <b>Why settle for single-tier?</b> With Rizzo's Riches, you get paid for building a network, not just making
+            a sale. Plus, we promote your programs to our entire community, so your reach is massive.
+        </p>
+        <div class="program-list">
+            <div class="program-card">
+                <h3>Amazon Associates</h3>
+                <p>Earn on every product sold. Bring your Amazon affiliate link and get 2-tier payouts!</p>
+                <a href="#">Add to Rizzo's Riches</a>
+            </div>
+            <div class="program-card">
+                <h3>ClickBank</h3>
+                <p>Promote digital products and get paid twice—once for your sale, once for your team's sales.</p>
+                <a href="#">Add to Rizzo's Riches</a>
+            </div>
+            <div class="program-card">
+                <h3>ShareASale</h3>
+                <p>Bring your favorite merchants and multiply your commissions with our 2-tier system.</p>
+                <a href="#">Add to Rizzo's Riches</a>
+            </div>
+            <div class="program-card">
+                <h3>Rakuten</h3>
+                <p>Get more from cashback and shopping referrals—now with 2-tier rewards!</p>
+                <a href="#">Add to Rizzo's Riches</a>
+            </div>
+            <div class="program-card">
+                <h3>Any Program You Love!</h3>
+                <p>Have a unique affiliate program? Bring it in and let the Rizzo's community help you grow.</p>
+                <a href="#">Add to Rizzo's Riches</a>
+            </div>
+        </div>
+        <p style="color:#228B22; font-weight:bold; font-size:1.1rem; margin-top:2rem;">The more programs you bring, the
+            more you earn. Build your own affiliate empire—right here!</p>
     </div>
-    <p><strong>Warning:</strong> Your phone or computer may be so full of Rizzo’s gifts and traffic, you’ll need a bigger hard drive!</p>
-  </div>
-  <div class="cta">
-  <h2>Ready to Join Rizzo’s Riches?</h2>
-  <p><strong>Don’t wait!</strong> This is a true community—no outsiders, no spam, just real people helping each other succeed. <b>We’ll get you your first 2 signups by advertising your link on all our social media (over 500,000 views/month) until you have them!</b> After that, you earn <b>70% commission on your direct signups</b> and <b>15% on their signups</b>. Every member gets a website, keyword research, and a personal action plan—done for you! Higher tiers get my full AI automation playbook and coaching. Plus, our AI chatbot and open chat room mean you’re never alone on your journey!</p>
-  <!-- Packages Section -->
-  <div class="package-grid" style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin:2.5rem 0 0 0;">
-    <div class="package-box" style="background:#e3e8ee; border:2px solid #b8c7d1; border-radius:12px; padding:2rem 1.5rem; min-width:260px; max-width:320px; flex:1 1 260px; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-      <h3>$49/mo Starter</h3>
-      <ul style="text-align:left;">
-        <li>Automated website built for you</li>
-        <li>Personalized keyword research & SEO plan</li>
-        <li>Step-by-step notepad instructions</li>
-        <li>Affiliate Marketing Cheat Sheet</li>
-        <li>Access to community chat & 24/7 AI chatbot</li>
-        <li>90% recurring commission for every member you bring in</li>
-        <li>Featured on all my social media</li>
-        <li>And yes, you get everything but the kitchen sink (I’m still negotiating with my plumber)</li>
-      </ul>
-      <button onclick="selectPackage(49)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Starter</button>
+    <div class="cta-section">
+        <h2>Ready to Build Your Affiliate Empire?</h2>
+        <p>Don't just join—lead! Bring your affiliate programs to Rizzo's Riches and watch your earnings multiply. Our
+            2-tier system means you get paid for your work <b>and</b> your team's success. Plus, we help promote your
+            links to our entire community. It's a win-win-win!</p>
+        <a href="https://buy.stripe.com/dRm00kftYfh9bgKfiefjG05" target="_blank" rel="noopener" class="big-btn"
+            style="display:inline-block; text-decoration:none;">Join Now with Stripe</a>
     </div>
-    <div class="package-box" style="background:#e3e8ee; border:2px solid #b8c7d1; border-radius:12px; padding:2rem 1.5rem; min-width:260px; max-width:320px; flex:1 1 260px; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-      <h3>$99/mo Intermediate</h3>
-      <ul style="text-align:left;">
-        <li>Everything in Starter</li>
-        <li>Top 10 Passive Income Tools</li>
-        <li>Bonus: Secret Resource Vault</li>
-        <li>Extra social media promotion</li>
-        <li>Priority support from Rizzo</li>
-      </ul>
-      <button onclick="selectPackage(99)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Intermediate</button>
+    <div class="guarantee">
+        <h2>100% Money-Back Guarantee</h2>
+        <p>Try Rizzo’s Riches risk-free! If you’re not absolutely thrilled with your affiliate store, just let us know
+            within 30 days and you’ll get a full refund. No questions asked, no hard feelings. That’s how confident we
+            are in the value you’ll get!</p>
     </div>
-    <div class="package-box" style="background:#e3e8ee; border:2px solid #b8c7d1; border-radius:12px; padding:2rem 1.5rem; min-width:260px; max-width:320px; flex:1 1 260px; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-      <h3>$249/mo Advanced</h3>
-      <ul style="text-align:left;">
-        <li>Everything in Intermediate</li>
-        <li>Personal 1-on-1 onboarding call</li>
-        <li>Custom AI automation tips for your niche</li>
-        <li>Extra featured placement in the network</li>
-      </ul>
-      <button onclick="selectPackage(249)" style="background:linear-gradient(90deg, #232f3e 0%, #3a5068 100%); color:#fff; border:none; border-radius:6px; padding:1rem 2rem; font-size:1.1rem; cursor:pointer; font-weight:bold; margin-top:1rem;">Join Advanced</button>
+    <div class="store-section">
+        <h2>Why Choose Rizzo's Riches?</h2>
+        <ul style="text-align:left; max-width:700px; margin:1.5rem auto; color:#232f3e; font-size:1.08rem;">
+            <li><b>2-Tier Commissions:</b> Earn 70% on your direct signups, 10% on your second tier—no limits!</li>
+            <li><b>Bring Your Own Programs:</b> Promote any affiliate program you love, and get paid for your network's
+                success.</li>
+            <li><b>Community Promotion:</b> We help share your links across our high-traffic channels (500,000+
+                views/month).</li>
+            <li><b>Automated Tracking:</b> All referrals tracked and paid out automatically—no spreadsheets, no
+                headaches.</li>
+            <li><b>Training & Support:</b> Access to our exclusive chat room, 24/7 AI chatbot, and ongoing affiliate
+                training.</li>
+            <li><b>Risk-Free:</b> 30-day money-back guarantee. If you don’t love it, you don’t pay.</li>
+            <li><b>Fun & Friendly:</b> We’re a real community—no spam, no scams, just real people helping each other
+                win.</li>
+        </ul>
+        <p style="color:#888; font-size:0.98rem; margin-top:1.2rem;">Ready to turn your affiliate links into a real
+            business? Join Rizzo's Riches and start building your own store today!</p>
     </div>
-  </div>
-  <script src="https://js.stripe.com/v3/"></script>
-  <script>
-    // Stripe integration with real publishable key and price IDs
-    var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
-    var priceIds = {
-      49: 'price_1SEbbhIcky1EcVjweMBiMjNJ', // $49/mo
-      99: 'price_1SEbeAIcky1EcVjwrkyybGBC', // $99/mo
-      249: 'price_1SEbfSIcky1EcVjwzLaoqz8X' // $249/mo
-    };
-    var mode = 'subscription';
-    function selectPackage(amount) {
-      var price = priceIds[amount];
-      if (!price) { alert('Please select a valid package.'); return; }
-      var checkoutParams = {
-        lineItems: [{ price: price, quantity: 1 }],
-        mode: mode,
-        successUrl: 'https://www.example.com/checkout?result=success',
-        cancelUrl: 'https://www.example.com/checkout/?result=cancel'
-      };
-      if (window.Rewardful && window.Rewardful.referral) {
-        checkoutParams.clientReferenceId = window.Rewardful.referral;
-      }
-      stripe.redirectToCheckout(checkoutParams);
-    }
-  </script>
-  <p style="font-size:0.95rem; color:#888;">Payments are securely processed by Stripe. Affiliate links and tracking are built in—just share your link to earn your share!<br>
-  <b>2-Tier Affiliate Model:</b> 70% for your direct signups, 15% for your second tier. We guarantee your first 2 signups by advertising your link on our high-traffic social media pages (500,000+ views/month).</p>
-  </div>
-  <div>
- class="gifts" style="margin-top:2rem;">
-    <h2>Community Chat Room & 24/7 AI Support</h2>
-    <p>Our exclusive chat room is open to all members—talk about your wins, your struggles, or just hang out. No bars, no limits, just real talk. And if you need help, our AI chatbot is always online to answer your questions, so you can focus on growing (and relaxing) while the community and automation do the work!</p>
-  </div>
-
-  <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #6c6;">
-    <h2 style="color:#228B22;">100% Money-Back Guarantee</h2>
-    <p>Try Rizzo’s Riches risk-free! If you’re not absolutely thrilled with your website, keyword plan, or the community, just let us know within 30 days and you’ll get a full refund. No questions asked, no hard feelings. That’s how confident we are in the value you’ll get!</p>
-  </div>
-
-  <!-- The backlinking and automation is now woven throughout the page as part of the Rizzo's Riches community offer. -->
-
-  <div class="gifts" style="margin-top:2rem; background:#f9f9f9; border:2px solid #bbb;">
-    <h2 style="color:#232f3e;">Privacy Policy</h2>
-    <p><strong>Your privacy matters to us.</strong> We collect only the information you provide when you sign up (such as your name, email, and payment details). This information is used solely to deliver your membership, process payments, and provide support. We do not sell or share your personal information with third parties, except as required to process payments (e.g., Stripe) or comply with the law.</p>
-    <p>We use cookies and analytics to improve your experience and track affiliate referrals. By using this site, you consent to our use of cookies.</p>
-    <p>If you have any questions or want your data deleted, just contact us at <a href="mailto:support@rizzosriches.com">support@rizzosriches.com</a>.</p>
-    <p>This policy may be updated from time to time. Please check back for changes.</p>
-  </div>
 </body>
-<!-- Rewardful Affiliate Tracking -->
-<script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');</script>
-<script async src='https://r.wdfl.co/rw.js' data-rewardful='4feba8'></script>
-</body>
+
 </html>
