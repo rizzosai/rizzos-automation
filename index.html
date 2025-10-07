@@ -1,53 +1,441 @@
-How to Join
-Choose your level below and send the exact USDT amount (Avalanche C-Chain) to the address shown.
-After payment, email your transaction ID and your best contact info to support@rizzosai.com
-We’ll confirm your payment and give you instant access to your affiliate dashboard!
-How the 10-Level Earnings Tree Works
-Imagine you’re at the top. Here’s how commissions flow down the tree for a single sale (let’s say a 100 USDT package for easy math):
-You (Top)
-│
-├─ Level 1: 40 USDT (Direct referral)
-│   └─ Level 2: 10 USDT
-│        └─ Level 3: 7 USDT
-│             └─ Level 4: 5 USDT
-│                  └─ Level 5: 4 USDT
-│                       └─ Level 6: 3 USDT
-│                            └─ Level 7: 3 USDT
-│                                 └─ Level 8: 3 USDT
-│                                      └─ Level 9: 3 USDT
-            © 2025 Rizzos AI. All rights reserved.
+<!DOCTYPE html>
+<html lang="en">
 
-            👀 Watch out for Rizzos Riches: Under maintenance 🚧
-        
-You refer Alice → You get 40 USDT (Level 1)
-Alice refers Bob → Alice gets 40 USDT, you get 10 USDT (Level 2)
-Bob refers Carol → Bob gets 40 USDT, Alice gets 10 USDT, you get 7 USDT (Level 3)
-...and so on, all the way to Level 10!
-You earn on every sale in your downline, up to 10 levels deep. The deeper your network, the more you make!
-Pro tip: Build wide and deep for maximum earnings.
-Potential Earnings Tree (2 Referrals Each)
-If everyone refers just 2 people and each person makes one sale per day, here’s what your network and daily earnings could look like for a 100 USDT package:
-Level 0:         You
-                │
-Level 1:      ┌─●───────────────●─┐
-             40 USDT         40 USDT
-                │               │
-Level 2:   ●───●───●       ●───●───●
-           10   10  10     10   10  10
-                │               │
-Level 3: 7  7  7  7  7   7  7  7  7  7  7  7  7
-... (continues to Level 10)
-        
-Potential Earnings Per Level (if all sales are 100 USDT and everyone refers 2):
-Level	People	Commission %	Commission per Sale	Total Daily Potential
-1	2	40%	40 USDT	80 USDT
-2	4	10%	10 USDT	40 USDT
-3	8	7%	7 USDT	56 USDT
-4	16	5%	5 USDT	80 USDT
-5	32	4%	4 USDT	128 USDT
-6	64	3%	3 USDT	192 USDT
-7	128	3%	3 USDT	384 USDT
-8	256	3%	3 USDT	768 USDT
-9	512	3%	3 USDT	1536 USDT
-10	1024	2%	2 USDT	2048 USDT
-This is just an example. Your actual results depend on your network’s activity. But as you c
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rizzo's Gift Explosion - Laugh & Profit!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6fa;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #232f3e 0%, #3a5068 100%);
+      color: #fff;
+      padding: 4.5rem 1rem 2.5rem 1rem;
+      text-align: center;
+      position: relative;
+      min-height: 340px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.2rem;
+      color: #b8c7d1;
+    }
+
+    .hero .badges {
+      margin: 1.5rem 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #b8c7d1;
+      color: #232f3e;
+      border-radius: 20px;
+      padding: 0.5rem 1.2rem;
+      margin: 0 0.3rem;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.10);
+    }
+
+    .timer {
+      font-size: 1.1rem;
+      background: #e3e8ee;
+      color: #232f3e;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .story,
+    .cta,
+    .gifts,
+    .testimonial {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(35, 47, 62, 0.08);
+    }
+
+    .story h2,
+    .gifts h2,
+    .cta h2,
+    .testimonial h2 {
+      color: #232f3e;
+    }
+
+    .story p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .laugh {
+      color: #3a5068;
+      font-weight: bold;
+    }
+
+    .gifts-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .gift-item {
+      background: #e3e8ee;
+      border: 2px solid #b8c7d1;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      min-width: 180px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.06);
+    }
+
+    .gift-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      text-align: center;
+    }
+
+    .cta button {
+      background: linear-gradient(90deg, #232f3e 0%, #3a5068 100%);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 1.2rem 3rem;
+      font-size: 1.3rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.18);
+      transition: background 0.2s;
+    }
+
+    .cta button:hover {
+      background: #3a5068;
+      color: #b8c7d1;
+    }
+
+    .testimonial {
+      text-align: center;
+      font-style: italic;
+      color: #444;
+    }
+
+    .testimonial .author {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #232f3e;
+    }
+
+    .as-seen {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .as-seen img {
+      height: 32px;
+      margin: 0 0.7rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .story,
+      .cta,
+      .gifts,
+      .testimonial {
+        padding: 1rem;
+      }
+
+      .gifts-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <script>
+    // Simple countdown timer for urgency
+    window.onload = function () {
+      var timer = document.getElementById('timer');
+      var seconds = 900; // 15 minutes
+      function updateTimer() {
+        var min = Math.floor(seconds / 60);
+        var sec = seconds % 60;
+        timer.textContent = 'Special bonus expires in: ' + min + 'm ' + (sec < 10 ? '0' : '') + sec + 's';
+        if (seconds > 0) { seconds--; setTimeout(updateTimer, 1000); }
+        else { timer.textContent = 'Bonus expired!'; }
+      }
+      updateTimer();
+    };
+  </script>
+</head>
+
+<body>
+  <div class="hero">
+    <h1>Welcome to Rizzo's Riches Community!</h1>
+    <h2>Where Even the Little Fish Can Swim (But Watch Out for the Sharks!)</h2>
+    <div class="badges">
+      <span class="badge">Affiliate-Only Access</span>
+      <span class="badge">2-Tier Commissions: 70% + 15%</span>
+      <span class="badge">We Get You Your First 2 Signups—Guaranteed!</span>
+    </div>
+    <div
+      style="font-size:1.1rem; margin:1.5rem 0; background:#e3e8ee; color:#232f3e; display:inline-block; padding:0.7rem 1.5rem; border-radius:8px; font-weight:bold;">
+      No outsiders—only those invited by a member can join. Whether you’re a minnow or a whale, you’re welcome in the
+      Rizzo’s pond. Here’s the kicker: <b>we guarantee your first 2 signups</b> by advertising your unique link on
+      Facebook, LinkedIn, Twitter, Instagram, and Reddit until you get them—no effort needed!<br><br>
+      Our pages get <b>over 500,000 views a month</b>, so your link will be seen by thousands. After that, you earn
+      <b>70% commission on your direct signups</b> (Tier 1) and <b>15% on their signups</b> (Tier 2).<br><br>
+      Plus, there’s a one-time $10 admin fee (just once, to keep the lights on—promise, not every month). Real
+      community, real rewards, and just a dash of envy from the sidelines.
+    </div>
+    <div class="timer" id="timer">Special bonus expires in: 15m 00s</div>
+  </div>
+  <!-- Affiliate Tools: Referral Link Generator & Earnings Calculator -->
+  <div class="gifts" style="margin-top:2rem; background:#e3e8ee; border:2px solid #b8c7d1;">
+    <h2 style="color:#232f3e;">Affiliate Tools</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:stretch; justify-content:center; flex-wrap:wrap;">
+      <!-- Referral Link Generator -->
+      <div
+        style="flex:1 1 320px; min-width:280px; max-width:400px; background:#f9f9f9; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(35,47,62,0.06); margin-bottom:1rem;">
+        <h3 style="color:#232f3e; margin-top:0;">Get Your Referral Link</h3>
+        <div style="display:flex; flex-wrap:wrap; gap:0.7rem; align-items:center; justify-content:center;">
+          <input id="affiliateCode" type="text" placeholder="Enter your affiliate code"
+            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; min-width:120px;">
+          <button onclick="generateReferralLink()"
+            style="padding:0.7rem 1.2rem; border-radius:6px; background:#232f3e; color:#fff; font-weight:bold; border:none; cursor:pointer;">Generate</button>
+        </div>
+        <div
+          style="display:flex; flex-wrap:wrap; gap:0.7rem; align-items:center; justify-content:center; margin-top:0.7rem;">
+          <input id="referralLink" type="text" readonly
+            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; min-width:180px; background:#f9f9f9;"
+            placeholder="Your referral link will appear here">
+          <button onclick="copyReferralLink()"
+            style="padding:0.7rem 1.2rem; border-radius:6px; background:#ffa500; color:#232f3e; font-weight:bold; border:none; cursor:pointer;">Copy</button>
+        </div>
+        <p style="font-size:0.93rem; color:#888; margin-top:0.7rem;">Share your unique link to earn
+          commissions!<br>Example: <span
+            style="color:#232f3e; font-weight:bold;">https://rizzosriches.com/?ref=YOURCODE</span></p>
+      </div>
+      <!-- Earnings Calculator -->
+      <div
+        style="flex:1 1 320px; min-width:280px; max-width:400px; background:#e3ffe3; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(34,139,34,0.08); margin-bottom:1rem;">
+        <h3 style="color:#228B22; margin-top:0;">Earnings Calculator</h3>
+        <div
+          style="display:flex; flex-direction:column; gap:0.7rem; align-items:center; justify-content:center; margin-bottom:0.7rem;">
+          <input id="numSales" type="number" min="0" placeholder="Your direct sales (Tier 1)"
+            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; width:100%; max-width:220px;">
+          <input id="tier2Sales" type="number" min="0" placeholder="Your affiliates' sales (Tier 2)"
+            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; width:100%; max-width:220px;">
+          <input id="saleAmount" type="number" min="1" value="49" placeholder="Sale amount ($)"
+            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; width:100%; max-width:140px;">
+          <button onclick="calcEarnings()"
+            style="padding:0.7rem 1.2rem; border-radius:6px; background:#228B22; color:#fff; font-weight:bold; border:none; cursor:pointer; margin-top:0.5rem;">Calculate</button>
+        </div>
+        <div id="earningsResult"
+          style="font-size:1.05rem; color:#228B22; text-align:center; font-weight:bold; min-height:1.5em;"></div>
+        <p style="font-size:0.93rem; color:#888; margin-top:0.7rem;">Tier 1: 70% commission | Tier 2: 10% commission</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function generateReferralLink() {
+      var code = document.getElementById('affiliateCode').value.trim();
+      var link = '';
+      if (code) {
+        link = 'https://rizzosriches.com/?ref=' + encodeURIComponent(code);
+      }
+      document.getElementById('referralLink').value = link;
+    }
+    function copyReferralLink() {
+      var link = document.getElementById('referralLink');
+      if (link.value) {
+        link.select();
+        link.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        alert('Referral link copied to clipboard!');
+      }
+    }
+    function calcEarnings() {
+      var tier1 = parseInt(document.getElementById('numSales').value) || 0;
+      var tier2 = parseInt(document.getElementById('tier2Sales').value) || 0;
+      var amount = parseFloat(document.getElementById('saleAmount').value) || 0;
+      var tier1Earnings = tier1 * amount * 0.7;
+      var tier2Earnings = tier2 * amount * 0.1;
+      var total = tier1Earnings + tier2Earnings;
+      var msg = '';
+      msg += 'You earn $' + tier1Earnings.toFixed(2) + ' from your direct sales (Tier 1). ';
+      msg += 'You earn $' + tier2Earnings.toFixed(2) + ' from your downline sales (Tier 2). ';
+      msg += 'Total earnings: $' + total.toFixed(2);
+      document.getElementById('earningsResult').textContent = msg;
+    }
+  </script>
+  <div class="as-seen">
+    <span>As seen on:</span>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/YouTube_social_white_squircle.svg" alt="YouTube" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" alt="Google" />
+  </div>
+  <div class="story">
+    <h2>Why Go It Alone? Join the Rizzo's Riches Movement!</h2>
+    <p>Ever tried to make money online by yourself? It’s like selling invisible socks—nobody sees you, and nobody buys!
+      <span class="laugh">(That’s 1!)</span>This a system is ran by AI so if you have any questions i mgt peak in the chat room to see what people are saying about me saying gee im glad i know rizzo hes th best thing since sliced bread this fella is and i will even show you how great this compensation plan is you see what this is just say frecks comes in at number one imagine frecks having 500 bucks anyways in usdt lol big red will have it ok i will get back to it then just say red brings in frecks and then while frecks is out looking for  people to join up under his tracked afilaalite link my ai bitch will you get you that  
+    </p>
+    <p>But what if you had a whole crew behind you, sharing your site on Facebook, Twitter, YouTube, Instagram,
+      Pinterest, and more? Suddenly, you’re everywhere! <span class="laugh">(That’s 2!)</span></p>
+    <p>At Rizzo’s Riches, we’re building a real community. Whether you’re just dipping your toes in or ready to
+      cannonball, there’s a package for every size and ambition. The little people can get in, but don’t be surprised if
+      you find yourself growing fins and a taste for bigger fish. And let’s be honest: I only take a sliver off the
+      top—just enough to keep the servers humming and my coffee cup full. (If you think that’s unfair, remember: even
+      GitHub takes a cut, and they didn’t come up with this idea!)</p>
+    <p>This isn’t like your grandma up at midnight tweeting “I’m a hore” to everybody—this is fun-loving stuff, like
+      waking up every morning and singing, “I got cash in my bank, dada!”</p>
+    <p>Stick with us, and together we’ll build something so big, people will be itching to give us their lunch money
+      just to join the party. (Seriously, I’ve seen it happen. Bring snacks.)</p>
+    <p>So, if you want to laugh, learn, and get seen by thousands, Rizzo’s Riches is your new home. Let’s make magic
+      happen—together! <span class="laugh">(That’s 5!)</span></p>
+  </div>
+  <div class="testimonial">
+    <h2>What People Are Saying</h2>
+    <p>“I laughed so hard, I nearly dropped my phone. And then I made my first $100 online—thanks, Rizzo!”</p>
+    <div class="author">— Jamie L., Happy Customer</div>
+  </div>
+  <div class="gifts">
+    <h2>What You Get as a Rizzo’s Riches Member</h2>
+    <div class="gifts-list">
+      <div class="gift-item"><span class="gift-icon">🎁</span>Exclusive eBook: Real Ways to Make Money Online</div>
+      <div class="gift-item"><span class="gift-icon">💡</span>Affiliate Marketing Cheat Sheet</div>
+      <div class="gift-item"><span class="gift-icon">🛠️</span>Top 10 Passive Income Tools</div>
+      <div class="gift-item"><span class="gift-icon">🌐</span>Automated Simple Website Built For You (with your name &
+        niche!)</div>
+      <div class="gift-item"><span class="gift-icon">�</span>Personalized Keyword Research & SEO Plan</div>
+      <div class="gift-item"><span class="gift-icon">📝</span>Step-by-step Notepad Instructions for Growing Your Site
+      </div>
+      <div class="gift-item"><span class="gift-icon">�🔒</span>Bonus: Secret Resource Vault</div>
+      <div class="gift-item"><span class="gift-icon">🌐</span>Your website featured on all my social media & site</div>
+      <div class="gift-item"><span class="gift-icon">🤝</span>Community support & ongoing training</div>
+      <div class="gift-item"><span class="gift-icon">💸</span>Earn 70% on your direct signups (Tier 1) and 15% on their
+        signups (Tier 2)</div>
+      <div class="gift-item"><span class="gift-icon">🔗</span>Access to our exclusive, members-only chat room</div>
+      <div class="gift-item"><span class="gift-icon">🤖</span>24/7 AI Chatbot for instant help—no waiting for support!
+      </div>
+      <div class="gift-item"><span class="gift-icon">🚀</span>For $1000 & $5000 Tiers: Full "How I Automated My Business
+        with AI" Guide + 1-on-1 Coaching</div>
+      <div class="gift-item"><span class="gift-icon">🎉</span>And more surprises from Rizzo!</div>
+    </div>
+    <p><strong>Warning:</strong> Your phone or computer may be so full of Rizzo’s gifts and traffic, you’ll need a
+      bigger hard drive!</p>
+  </div>
+  <div class="cta">
+    <h2>Ready to Join Rizzo’s Riches?</h2>
+    <p><strong>Don’t wait!</strong> This is a true community—no outsiders, no spam, just real people helping each other succeed. <b>We’ll get you your first 2 signups by advertising your link on all our social media (over 500,000 views/month) until you have them!</b> After that, you earn <b>70% commission on your direct signups</b> and <b>15% on their signups</b>. Every member gets a website, keyword research, and a personal action plan—done for you! Higher tiers get my full AI automation playbook and coaching. Plus, our AI chatbot and open chat room mean you’re never alone on your journey!</p>
+    <!-- Payment Options Section -->
+    <div class="payment-options" style="margin:2rem 0; text-align:center;">
+      <h3 style="color:#232f3e;">Choose Your Payment Method</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
+        <!-- Stripe Payments -->
+        <div style="flex:1 1 320px; min-width:260px; max-width:340px; background:#e3e8ee; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
+          <h4>Pay with Card (Stripe)</h4>
+          <button onclick="selectPackage(49)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$49/mo Starter</button>
+          <button onclick="selectPackage(99)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$99/mo Intermediate</button>
+          <button onclick="selectPackage(249)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$249/mo Advanced</button>
+          <p style="font-size:0.95rem; color:#888; margin-top:1rem;">Payments are securely processed by Stripe.<br>Affiliate links and tracking are built in—just share your link to earn your share!</p>
+        </div>
+        <!-- Crypto Payments -->
+        <div style="flex:1 1 320px; min-width:260px; max-width:340px; background:#fff7e6; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(255,165,0,0.10);">
+          <h4>Pay with Crypto</h4>
+          <p>Send your payment to our CoinSpot wallet or preferred crypto address below. After payment, email your transaction ID and package choice to <a href="mailto:support@rizzosriches.com">support@rizzosriches.com</a> for activation.</p>
+          <div style="background:#ffe; border:1px solid #ffa500; border-radius:6px; padding:0.7rem; margin-bottom:0.7rem;">
+            <b>CoinSpot Wallet:</b> <span style="word-break:break-all;">[YOUR_COINSPOT_ADDRESS]</span><br>
+            <b>Other Crypto:</b> <span style="word-break:break-all;">[YOUR_OTHER_CRYPTO_ADDRESS]</span>
+          </div>
+          <p style="font-size:0.93rem; color:#888;">We accept Bitcoin, Ethereum, USDT, and more. Contact us for other coins or questions!</p>
+        </div>
+      </div>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
+        var priceIds = {
+          49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
+          99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
+          249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'
+        };
+        var mode = 'subscription';
+        function selectPackage(amount) {
+          var price = priceIds[amount];
+          if (!price) { alert('Please select a valid package.'); return; }
+          var checkoutParams = {
+            lineItems: [{ price: price, quantity: 1 }],
+            mode: mode,
+            successUrl: 'https://www.example.com/checkout?result=success',
+            cancelUrl: 'https://www.example.com/checkout/?result=cancel'
+          };
+          if (window.Rewardful && window.Rewardful.referral) {
+            checkoutParams.clientReferenceId = window.Rewardful.referral;
+          }
+          stripe.redirectToCheckout(checkoutParams);
+        }
+      </script>
+    </div>
+    <p style="font-size:0.95rem; color:#888; margin-top:2rem;">2-Tier Affiliate Model: 70% for your direct signups, 15% for your second tier. We guarantee your first 2 signups by advertising your link on our high-traffic social media pages (500,000+ views/month).</p>
+  </div>
+  <div class="gifts" style="margin-top:2rem; background:#fff7e6; border:2px solid #ffa500;">
+    <h2 style="color:#ff8800;">Community Chat Room & 24/7 AI Support</h2>
+    <p>Our exclusive chat room is open to all members—talk about your wins, your struggles, or just hang out. No bars,
+      no limits, just real talk. And if you need help, our AI chatbot is always online to answer your questions, so you
+      can focus on growing (and relaxing) while the community and automation do the work!</p>
+  </div>
+
+  <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #6c6;">
+    <h2 style="color:#228B22;">100% Money-Back Guarantee</h2>
+    <p>Try Rizzo’s Riches risk-free! If you’re not absolutely thrilled with your website, keyword plan, or the
+      community, just let us know within 30 days and you’ll get a full refund. No questions asked, no hard feelings.
+      That’s how confident we are in the value you’ll get!</p>
+  </div>
+
+  <!-- The backlinking and automation is now woven throughout the page as part of the Rizzo's Riches community offer. -->
+
+  <div class="gifts" style="margin-top:2rem; background:#f9f9f9; border:2px solid #bbb;">
+    <h2 style="color:#232f3e;">Privacy Policy</h2>
+    <p><strong>Your privacy matters to us.</strong> We collect only the information you provide when you sign up (such
+      as your name, email, and payment details). This information is used solely to deliver your membership, process
+      payments, and provide support. We do not sell or share your personal information with third parties, except as
+      required to process payments (e.g., Stripe) or comply with the law.</p>
+    <p>We use cookies and analytics to improve your experience and track affiliate referrals. By using this site, you
+      consent to our use of cookies.</p>
+    <p>If you have any questions or want your data deleted, just contact us at <a
+        href="mailto:support@rizzosriches.com">support@rizzosriches.com</a>.</p>
+    <p>This policy may be updated from time to time. Please check back for changes.</p>
+  </div>
+</body>
+<!-- Rewardful Affiliate Tracking -->
+<script>(function (w, r) { w._rwq = r; w[r] = w[r] || function () { (w[r].q = w[r].q || []).push(arguments) } })(window, 'rewardful');</script>
+<script async src='https://r.wdfl.co/rw.js' data-rewardful='4feba8'></script>
+</body>
+
+</html>
