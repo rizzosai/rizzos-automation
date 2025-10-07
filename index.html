@@ -349,58 +349,9 @@
       <div class="gift-item"><span class="gift-icon">🎉</span>And more surprises from Rizzo!</div>
     </div>
     <p><strong>Warning:</strong> Your phone or computer may be so full of Rizzo’s gifts and traffic, you’ll need a
-      bigger hard drive!</p>
-  </div>
-  <div class="cta">
-    <h2>Ready to Join Rizzo’s Riches?</h2>
-    <p><strong>Don’t wait!</strong> This is a true community—no outsiders, no spam, just real people helping each other succeed. <b>We’ll get you your first 2 signups by advertising your link on all our social media (over 500,000 views/month) until you have them!</b> After that, you earn <b>70% commission on your direct signups</b> and <b>15% on their signups</b>. Every member gets a website, keyword research, and a personal action plan—done for you! Higher tiers get my full AI automation playbook and coaching. Plus, our AI chatbot and open chat room mean you’re never alone on your journey!</p>
-    <!-- Payment Options Section -->
-    <div class="payment-options" style="margin:2rem 0; text-align:center;">
-      <h3 style="color:#232f3e;">Choose Your Payment Method</h3>
-      <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-        <!-- Stripe Payments -->
-        <div style="flex:1 1 320px; min-width:260px; max-width:340px; background:#e3e8ee; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(35,47,62,0.10);">
-          <h4>Pay with Card (Stripe)</h4>
-          <button onclick="selectPackage(49)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$49/mo Starter</button>
-          <button onclick="selectPackage(99)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$99/mo Intermediate</button>
-          <button onclick="selectPackage(249)" style="margin:0.5rem; padding:1rem 2rem; background:#232f3e; color:#fff; border:none; border-radius:6px; font-size:1.1rem; font-weight:bold; cursor:pointer;">$249/mo Advanced</button>
-          <p style="font-size:0.95rem; color:#888; margin-top:1rem;">Payments are securely processed by Stripe.<br>Affiliate links and tracking are built in—just share your link to earn your share!</p>
-        </div>
-        <!-- Crypto Payments -->
-        <div style="flex:1 1 320px; min-width:260px; max-width:340px; background:#fff7e6; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(255,165,0,0.10);">
-          <h4>Pay with Crypto</h4>
-          <p>Send your payment to our CoinSpot wallet or preferred crypto address below. After payment, email your transaction ID and package choice to <a href="mailto:support@rizzosriches.com">support@rizzosriches.com</a> for activation.</p>
-          <div style="background:#ffe; border:1px solid #ffa500; border-radius:6px; padding:0.7rem; margin-bottom:0.7rem;">
-            <b>CoinSpot Wallet:</b> <span style="word-break:break-all;">[YOUR_COINSPOT_ADDRESS]</span><br>
-            <b>Other Crypto:</b> <span style="word-break:break-all;">[YOUR_OTHER_CRYPTO_ADDRESS]</span>
-          </div>
-          <p style="font-size:0.93rem; color:#888;">We accept Bitcoin, Ethereum, USDT, and more. Contact us for other coins or questions!</p>
-        </div>
-      </div>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
-        var priceIds = {
-          49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
-          99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
-          249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'
-        };
-        var mode = 'subscription';
-        function selectPackage(amount) {
-          var price = priceIds[amount];
-          if (!price) { alert('Please select a valid package.'); return; }
-          var checkoutParams = {
-            lineItems: [{ price: price, quantity: 1 }],
-            mode: mode,
-            successUrl: 'https://www.example.com/checkout?result=success',
-            cancelUrl: 'https://www.example.com/checkout/?result=cancel'
-          };
-          if (window.Rewardful && window.Rewardful.referral) {
-            checkoutParams.clientReferenceId = window.Rewardful.referral;
-          }
-          stripe.redirectToCheckout(checkoutParams);
-        }
-      </script>
+       
+      
+        var
     </div>
     <p style="font-size:0.95rem; color:#888; margin-top:2rem;">2-Tier Affiliate Model: 70% for your direct signups, 15% for your second tier. We guarantee your first 2 signups by advertising your link on our high-traffic social media pages (500,000+ views/month).</p>
   </div>
