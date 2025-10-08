@@ -394,12 +394,13 @@
         <div style="display: none;"><img src="https://forms.aweber.com/form/displays.htm?id=bMyM7IzsjJxs" alt="" /></div>
       </form>
       <div style="color:#888;font-size:0.98em;margin-top:0.7em;">We’ll send you a free guide and onboarding info. You must join Aweber to get paid and not lose sales!</div>
+      <div style="color:#d32f2f;font-size:1.08em;margin:1.2em 0 2em 0;font-weight:bold;">Note: <span style="color:#222;">$10 of your payment is a <u>one-time admin fee</u> to help keep this website alive and support the community. You only pay this once!</span></div>
         <!-- Payment Links -->
         <div style="margin:2.5rem auto 2rem auto;max-width:340px;padding:2rem 1.5rem;background:#fff7e6;border-radius:12px;border:2px solid #ffa500;box-shadow:0 2px 8px rgba(255,168,0,0.08);text-align:center;">
           <h3 style="color:#d35400;margin-bottom:0.7em;">Pay with Card (Stripe)</h3>
-          <a href="https://buy.stripe.com/3cIfZichMglddoS1rofjG09" target="_blank" rel="noopener" style="display:block;margin-bottom:1em;background:#1976d2;color:#fff;padding:1em 0;border-radius:8px;font-weight:bold;text-decoration:none;">Pay 29 USDT (Starter)</a>
-          <a href="https://buy.stripe.com/5kQcN681w1qj4Sm8TQfjG0b" target="_blank" rel="noopener" style="display:block;margin-bottom:1em;background:#388e3c;color:#fff;padding:1em 0;border-radius:8px;font-weight:bold;text-decoration:none;">Pay 99 USDT (Pro)</a>
-          <a href="https://buy.stripe.com/14A9AU6Xs6KD3Oi0nkfjG0a" target="_blank" rel="noopener" style="display:block;margin-bottom:1em;background:#fbc02d;color:#222;padding:1em 0;border-radius:8px;font-weight:bold;text-decoration:none;">Pay 500 USDT (Elite)</a>
+          <button onclick="payWithPackage('starter')" style="display:block;margin-bottom:1em;background:#1976d2;color:#fff;padding:1em 0;border-radius:8px;font-weight:bold;width:100%;font-size:1.1em;cursor:pointer;">Pay 29 USDT (Starter)</button>
+          <button onclick="payWithPackage('pro')" style="display:block;margin-bottom:1em;background:#388e3c;color:#fff;padding:1em 0;border-radius:8px;font-weight:bold;width:100%;font-size:1.1em;cursor:pointer;">Pay 99 USDT (Pro)</button>
+          <button onclick="payWithPackage('elite')" style="display:block;margin-bottom:1em;background:#fbc02d;color:#222;padding:1em 0;border-radius:8px;font-weight:bold;width:100%;font-size:1.1em;cursor:pointer;">Pay 500 USDT (Elite)</button>
           <div style="color:#888;font-size:0.98em;margin-top:0.7em;">Fast, secure, and you get access instantly after payment!</div>
         </div>
         <div style="margin:2.5rem auto 2rem auto;max-width:340px;padding:2rem 1.5rem;background:#e3f2fd;border-radius:12px;border:2px solid #2196f3;box-shadow:0 2px 8px rgba(33,150,243,0.08);text-align:center;">
@@ -410,26 +411,37 @@
         </div>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
-        var stripe = Stripe('pk_live_51SD8MBIcky1EcVjwNM8QTep1ZLy5aS6VNqXAbgsztDed3lCMXu6tZL4dWqZ48DgrJBnp24pd0HCjBJUhdSjgwbtY00R8tIolzc');
-        var priceIds = {
-          49: 'price_1SEbbhIcky1EcVjweMBiMjNJ',
-          99: 'price_1SEbeAIcky1EcVjwrkyybGBC',
-          249: 'price_1SEbfSIcky1EcVjwzLaoqz8X'
-        };
-        var mode = 'subscription';
-        function selectPackage(amount) {
-          var price = priceIds[amount];
-          if (!price) { alert('Please select a valid package.'); return; }
-          var checkoutParams = {
-            lineItems: [{ price: price, quantity: 1 }],
-            mode: mode,
-            successUrl: 'https://www.example.com/checkout?result=success',
-            cancelUrl: 'https://www.example.com/checkout/?result=cancel'
-          };
-          if (window.Rewardful && window.Rewardful.referral) {
-            checkoutParams.clientReferenceId = window.Rewardful.referral;
+        function payWithPackage(packageName) {
+          // Get user info (replace with real user logic)
+          var userId = localStorage.getItem('user_id') || prompt('Enter your User ID:');
+          var sponsorId = localStorage.getItem('sponsor_id') || prompt('Enter your Sponsor ID:');
+          if (!userId || !sponsorId) {
+            alert('User ID and Sponsor ID are required.');
+            return;
           }
-          stripe.redirectToCheckout(checkoutParams);
+          var formData = new FormData();
+          formData.append('user_id', userId);
+          formData.append('sponsor_id', sponsorId);
+          formData.append('package', packageName);
+          fetch('/pay', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => {
+            if (response.redirected) {
+              window.location.href = response.url;
+            } else {
+              return response.json();
+            }
+          })
+          .then(data => {
+            if (data && data.message) {
+              alert(data.message);
+            }
+          })
+          .catch(error => {
+            alert('Payment error: ' + error);
+          });
         }
       </script>
     </div>
