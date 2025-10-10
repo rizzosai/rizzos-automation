@@ -194,6 +194,68 @@
 </head>
 
 <body>
+  <!-- Username Registration Section -->
+  <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #228B22; text-align:center;">
+    <h2 style="color:#228B22;">Step 1: Choose Your Username</h2>
+    <p style="font-size:1.1rem;">Pick a unique username for your affiliate account. This will be used for your dashboard and referral link.</p>
+    <div style="margin:1.2rem 0;">
+      <input id="usernameInput" type="text" placeholder="Enter desired username" style="padding:0.7rem 1.2rem; border-radius:6px; border:1px solid #bbb; font-size:1.08rem; min-width:180px;">
+      <button onclick="checkUsername()" style="padding:0.7rem 1.5rem; border-radius:6px; background:#232f3e; color:#fff; font-weight:bold; border:none; cursor:pointer; margin-left:0.5rem;">Check Availability</button>
+    </div>
+    <div id="usernameStatus" style="margin:1.2rem 0; font-size:1.08rem;"></div>
+    <div id="paymentSection" style="display:none;">
+      <h2 style="color:#228B22;">Step 2: Pay Your Membership</h2>
+      <p style="font-size:1.1rem;">To activate your affiliate account, choose your payment method below. Stripe is fastest and most secure!</p>
+      <div style="margin:1.2rem 0;">
+        <b>Pay with Card (Stripe):</b><br>
+        <a href="https://buy.stripe.com/3cIfZichMglddoS1rofjG09" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Starter</a>
+        <a href="https://buy.stripe.com/5kQcN681w1qj4Sm8TQfjG0b" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Pro</a>
+        <a href="https://buy.stripe.com/14A9AU6Xs6KD3Oi0nkfjG0a" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Elite</a>
+      </div>
+      <div style="margin:1.2rem 0;">
+        <b>Pay with Crypto (USDT Avax-C):</b><br>
+        <span style="font-family:monospace; color:#1976d2; font-size:1.08rem;">0xed6aabdc5dff3a2a754653dc8b1a9173ba0dd053</span>
+      </div>
+      <div style="margin:1.2rem 0;">
+        <b>Your Affiliate Link:</b><br>
+        <span id="affiliateLink" style="color:#232f3e; font-weight:bold; font-size:1.08rem;"></span>
+        <br><span style="color:#888; font-size:0.98rem;">Share this link to earn commissions!</span>
+      </div>
+      <p style="margin-top:1.2rem; color:#228B22; font-weight:bold;">After payment, you'll get instant access to your dashboard, guides, and referral tools.</p>
+    </div>
+  </div>
+    // Username availability checker (sample, replace URL with your backend API)
+    function checkUsername() {
+      var username = document.getElementById('usernameInput').value.trim();
+      var statusDiv = document.getElementById('usernameStatus');
+      if (!username) {
+        statusDiv.textContent = 'Please enter a username.';
+        statusDiv.style.color = '#d32f2f';
+        return;
+      }
+      statusDiv.textContent = 'Checking...';
+      statusDiv.style.color = '#888';
+      // Replace with your backend API endpoint
+      fetch('/api/check-username?username=' + encodeURIComponent(username))
+        .then(response => response.json())
+        .then(data => {
+          if (data.available) {
+            statusDiv.textContent = 'Username is available!';
+            statusDiv.style.color = '#228B22';
+            document.getElementById('paymentSection').style.display = 'block';
+            document.getElementById('affiliateLink').textContent = 'https://rizzosai.com/?ref=' + username;
+          } else {
+            statusDiv.textContent = 'Username is taken. Please choose another.';
+            statusDiv.style.color = '#d32f2f';
+            document.getElementById('paymentSection').style.display = 'none';
+          }
+        })
+        .catch(() => {
+          statusDiv.textContent = 'Error checking username. Try again.';
+          statusDiv.style.color = '#d32f2f';
+          document.getElementById('paymentSection').style.display = 'none';
+        });
+    }
   <div class="hero">
     <h1>Welcome to Rizzos AI Community!</h1>
     <h2>Where Even the Little Fish Can Swim (But Watch Out for the Sharks!)</h2>
@@ -203,20 +265,16 @@
       <span class="badge">We Get You Your First 3 Signups—No One Left Behind!</span>
     </div>
     <div class="timer" id="timer">Special bonus expires in: 15m 00s</div>
-    <!-- $10 admin fee notice removed -->
+  <!-- $10 admin fee notice removed -->
   </div>
   <!-- Rizzos AI Introduction and Compensation Plan -->
   <div class="gifts" style="margin-top:2rem; background:#fffbe6; border:2px solid #ffa500;">
-  <h2 style="color:#d35400;"><strong>Rizzos AI: No More Hassle, Just Money!</strong></h2>
+  <h2 style="color:#d35400;"><strong>Rizzos AI: Upfront, Honest, and Daily Payouts!</strong></h2>
   <strong>
-  <p>Here at Rizzos AI, we’re not just another fly-by-night company—we’re genuinely committed to helping you make real money. Let’s face it, cash is what everyone’s short of these days, but not anymore! Rizzo is here to rescue you from the daily grind, the endless hassle, and those soul-crushing alarm clocks. Rizzo says, <b>“Forget that!”</b> He’d rather be snoozing away, dreaming big, while the rest of the world is waking up to another day of work.</p>
-  <p>Picture this: Rizzo, working on his laptop—a bargain from Amazon, delivered the very next day. You can’t go wrong with a deal like that! It’s a pretty good machine, too: 8 GB of RAM, 500 GB hard drive. But enough about me—okay, it’s always about me, I admit! 😂</p>
-  <p>Now, let me share a truly lucrative opportunity that you can grab first-hand. I promise, I’ll only need to advertise this once before it goes absolutely bonkers. So, as they say, first in, best dressed! What I’m about to reveal has never been done before anywhere on the internet: <b>you’re guaranteed to get paid every single day just by sharing a link.</b> All you need is to know at least three people who want to make money—then boom, you’re a rockstar!</p>
-  <p>When you see this compensation plan, you’ll realize whoever came up with it is a complete genius. Spoiler alert: that genius is me! I’ve always had a knack for numbers, and I’ve crafted a foolproof plan. This is <b>not a Ponzi scheme</b>—I’m here for the long haul. My back office is already set up, ready to welcome people like you into the magical world of Rizzos AI.</p>
-  <p>So, let’s talk about the compensation plan. I know you’re waiting for it—enough of my rambling, right? I can hear you! Here’s the deal: <b>At Rizzos AI, you get paid every day, and as soon as someone pays you, the money lands straight in your account—no waiting around like those other affiliate programs</b> (no offense to them!). Plus, you can earn override bonuses: when your downline makes a sale, a portion of that commission (the override) goes straight to you, rewarding you for building your team and helping others succeed.</p>
-  <p>Here’s how it works: If you join under “Red,” and let’s call the next person “Brown,” then Brown goes out and gets one person—that commission goes straight to Brown. When Brown gets another referral, that one goes up to Red as an override bonus. After that, Brown keeps all the referrals he brings in from then on, except for the <b>30% admin fee</b> that goes to me for bringing this opportunity to you. As they say, there’s no such thing as a free lunch! <b>haha</b></p>
-
-  <p style="margin-top:1.5em;">If you are unable to get three referrals within your first 24 hours, or if you are not completely satisfied for any reason, simply contact us and request a full refund—no questions asked. Your refund will go straight into <b>your</b> account, not mine. We stand behind our program and your success is our top priority.</p>
+  <p>At Rizzos AI, you choose your level and pay the admin fee upfront—no free trial, no waiting. Enter your Stripe card info, and you’re in! You can start building your downline and earning commissions from day one.</p>
+  <p>Stripe holds your payouts for the first 7 days to make sure everything’s legit, but every dollar you earn is yours. Once Stripe gives the green light, you’ll get paid every night at midnight, with my AI bots doing all the heavy lifting (seriously, those bots must have sore shoulders from carrying me all the time 😂).</p>
+  <p>If you can’t get 3 referrals in your first week, you can walk away—no hard feelings. Your earned commissions will be waiting for you once Stripe’s trust period is over. It’s all about building trust and making sure everyone gets paid, every day, forever.</p>
+  <p>Jump in, get started, and let Rizzos AI do the work. The only thing you risk is missing out!</p>
   </strong>
   </div>
   <!-- Affiliate Tools: Referral Link Generator & Earnings Calculator -->
