@@ -1,464 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rizzo's Gift Explosion - Laugh & Profit!</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f6fa;
-    }
-
-    .hero {
-      background: linear-gradient(120deg, #232f3e 0%, #3a5068 100%);
-      color: #fff;
-      padding: 4.5rem 1rem 2.5rem 1rem;
-      text-align: center;
-      position: relative;
-      min-height: 340px;
-    }
-
-    .hero h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .hero h2 {
-      font-size: 1.25rem;
-      margin-bottom: 1.2rem;
-      color: #b8c7d1;
-    }
-
-    .hero .badges {
-      margin: 1.5rem 0;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #b8c7d1;
-      color: #232f3e;
-      border-radius: 20px;
-      padding: 0.5rem 1.2rem;
-      margin: 0 0.3rem;
-      font-weight: bold;
-      font-size: 1rem;
-      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.10);
-    }
-
-    .timer {
-      font-size: 1.1rem;
-      background: #e3e8ee;
-      color: #232f3e;
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-    }
-
-    .story,
-    .cta,
-    .gifts,
-    .testimonial {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(35, 47, 62, 0.08);
-    }
-
-    .story h2,
-    .gifts h2,
-    .cta h2,
-    .testimonial h2 {
-      color: #232f3e;
-    }
-
-    .story p {
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .laugh {
-      color: #3a5068;
-      font-weight: bold;
-    }
-
-    .gifts-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      justify-content: center;
-      margin: 2rem 0;
-    }
-
-    .gift-item {
-      background: #e3e8ee;
-      border: 2px solid #b8c7d1;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      min-width: 180px;
-      text-align: center;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.06);
-    }
-
-    .gift-icon {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .cta {
-      text-align: center;
-    }
-
-    .cta button {
-      background: linear-gradient(90deg, #232f3e 0%, #3a5068 100%);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 1.2rem 3rem;
-      font-size: 1.3rem;
-      cursor: pointer;
-      margin-top: 1.5rem;
-      font-weight: bold;
-      box-shadow: 0 2px 8px rgba(35, 47, 62, 0.18);
-      transition: background 0.2s;
-    }
-
-    .cta button:hover {
-      background: #3a5068;
-      color: #b8c7d1;
-    }
-
-    .testimonial {
-      text-align: center;
-      font-style: italic;
-      color: #444;
-    }
-
-    .testimonial .author {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #232f3e;
-    }
-
-    .as-seen {
-      text-align: center;
-      margin: 2rem 0;
-    }
-
-    .as-seen img {
-      height: 32px;
-      margin: 0 0.7rem;
-      opacity: 0.7;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.5rem;
-      }
-
-      .story,
-      .cta,
-      .gifts,
-      .testimonial {
-        padding: 1rem;
-      }
-
-      .gifts-list {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-  <script>
-    // Simple countdown timer for urgency
-    window.onload = function () {
-      var timer = document.getElementById('timer');
-      var seconds = 900; // 15 minutes
-      function updateTimer() {
-        var min = Math.floor(seconds / 60);
-        var sec = seconds % 60;
-        timer.textContent = 'Special bonus expires in: ' + min + 'm ' + (sec < 10 ? '0' : '') + sec + 's';
-        if (seconds > 0) { seconds--; setTimeout(updateTimer, 1000); }
-        else { timer.textContent = 'Bonus expired!'; }
-      }
-      updateTimer();
-    };
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizzo Affiliate Revolution</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f7fafc 0%, #e3e6f3 100%);
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 40px 32px;
+        }
+        h1 {
+            color: #3a3a7c;
+            font-size: 2.8em;
+            margin-bottom: 0.2em;
+        }
+        h2 {
+            color: #5c5caa;
+            margin-top: 2em;
+        }
+        .levels {
+            display: flex;
+            gap: 24px;
+            margin: 2em 0;
+            justify-content: center;
+        }
+        .level {
+            background: #f3f6ff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+            padding: 24px;
+            flex: 1;
+            text-align: center;
+        }
+        .level h3 {
+            margin: 0 0 0.5em 0;
+            color: #3a3a7c;
+        }
+        .level .price {
+            font-size: 2em;
+            color: #2e8b57;
+            font-weight: bold;
+        }
+        .level .earnings {
+            font-size: 1.2em;
+            color: #444;
+            margin-top: 0.5em;
+        }
+        .diagram {
+            margin: 2em 0;
+            text-align: center;
+        }
+        .diagram img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(60,60,120,0.10);
+        }
+        .notice {
+            background: #ffe4e1;
+            color: #b22222;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 2em 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        .cta {
+            background: linear-gradient(90deg, #3a3a7c 0%, #2e8b57 100%);
+            color: #fff;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 2em;
+            box-shadow: 0 2px 16px rgba(60,60,120,0.12);
+        }
+        .funny {
+            font-style: italic;
+            color: #888;
+            margin: 1em 0;
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Username Registration Section -->
-  <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #228B22; text-align:center;">
-    <h2 style="color:#228B22;">Step 1: Choose Your Username</h2>
-    <p style="font-size:1.1rem;">Pick a unique username for your affiliate account. This will be used for your dashboard and referral link.</p>
-    <div style="margin:1.2rem 0;">
-      <input id="usernameInput" type="text" placeholder="Enter desired username" style="padding:0.7rem 1.2rem; border-radius:6px; border:1px solid #bbb; font-size:1.08rem; min-width:180px;">
-      <button onclick="checkUsername()" style="padding:0.7rem 1.5rem; border-radius:6px; background:#232f3e; color:#fff; font-weight:bold; border:none; cursor:pointer; margin-left:0.5rem;">Check Availability</button>
-    </div>
-    <div id="usernameStatus" style="margin:1.2rem 0; font-size:1.08rem;"></div>
-    <div id="paymentSection" style="display:none;">
-      <h2 style="color:#228B22;">Step 2: Pay Your Membership</h2>
-      <p style="font-size:1.1rem;">To activate your affiliate account, choose your payment method below. Stripe is fastest and most secure!</p>
-      <div style="margin:1.2rem 0;">
-        <b>Pay with Card (Stripe):</b><br>
-        <a href="https://buy.stripe.com/3cIfZichMglddoS1rofjG09" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Starter</a>
-        <a href="https://buy.stripe.com/5kQcN681w1qj4Sm8TQfjG0b" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Pro</a>
-        <a href="https://buy.stripe.com/14A9AU6Xs6KD3Oi0nkfjG0a" target="_blank" style="margin:0 0.5rem; padding:0.7rem 1.5rem; background:#232f3e; color:#fff; border-radius:6px; font-weight:bold; text-decoration:none; display:inline-block;">Elite</a>
-      </div>
-      <div style="margin:1.2rem 0;">
-        <b>Pay with Crypto (USDT Avax-C):</b><br>
-        <span style="font-family:monospace; color:#1976d2; font-size:1.08rem;">0xed6aabdc5dff3a2a754653dc8b1a9173ba0dd053</span>
-      </div>
-      <div style="margin:1.2rem 0;">
-        <b>Your Affiliate Link:</b><br>
-        <span id="affiliateLink" style="color:#232f3e; font-weight:bold; font-size:1.08rem;"></span>
-        <br><span style="color:#888; font-size:0.98rem;">Share this link to earn commissions!</span>
-      </div>
-      <p style="margin-top:1.2rem; color:#228B22; font-weight:bold;">After payment, you'll get instant access to your dashboard, guides, and referral tools.</p>
-    </div>
-  </div>
-    // Username availability checker (sample, replace URL with your backend API)
-    function checkUsername() {
-      var username = document.getElementById('usernameInput').value.trim();
-      var statusDiv = document.getElementById('usernameStatus');
-      if (!username) {
-        statusDiv.textContent = 'Please enter a username.';
-        statusDiv.style.color = '#d32f2f';
-        return;
-      }
-      statusDiv.textContent = 'Checking...';
-      statusDiv.style.color = '#888';
-      // Replace with your backend API endpoint
-      fetch('/api/check-username?username=' + encodeURIComponent(username))
-        .then(response => response.json())
-        .then(data => {
-          if (data.available) {
-            statusDiv.textContent = 'Username is available!';
-            statusDiv.style.color = '#228B22';
-            document.getElementById('paymentSection').style.display = 'block';
-            document.getElementById('affiliateLink').textContent = 'https://rizzosai.com/?ref=' + username;
-          } else {
-            statusDiv.textContent = 'Username is taken. Please choose another.';
-            statusDiv.style.color = '#d32f2f';
-            document.getElementById('paymentSection').style.display = 'none';
-          }
-        })
-        .catch(() => {
-          statusDiv.textContent = 'Error checking username. Try again.';
-          statusDiv.style.color = '#d32f2f';
-          document.getElementById('paymentSection').style.display = 'none';
-        });
-    }
-  <div class="hero">
-    <h1>Welcome to Rizzos AI Community!</h1>
-    <h2>Where Even the Little Fish Can Swim (But Watch Out for the Sharks!)</h2>
-    <div class="badges">
-      <span class="badge">Affiliate-Only Access</span>
-      <span class="badge">Smart Pass-Up: 30% of First Sale & Second Referral</span>
-      <span class="badge">We Get You Your First 3 Signups—No One Left Behind!</span>
-    </div>
-    <div class="timer" id="timer">Special bonus expires in: 15m 00s</div>
-  <!-- $10 admin fee notice removed -->
-  </div>
-  <!-- Rizzos AI Introduction and Compensation Plan -->
-  <div class="gifts" style="margin-top:2rem; background:#fffbe6; border:2px solid #ffa500;">
-  <h2 style="color:#d35400;"><strong>Rizzos AI: Upfront, Honest, and Daily Payouts!</strong></h2>
-  <strong>
-  <p>At Rizzos AI, you choose your level and pay the admin fee upfront—no free trial, no waiting. Enter your Stripe card info, and you’re in! You can start building your downline and earning commissions from day one.</p>
-  <p>Stripe holds your payouts for the first 7 days to make sure everything’s legit, but every dollar you earn is yours. Once Stripe gives the green light, you’ll get paid every night at midnight, with my AI bots doing all the heavy lifting (seriously, those bots must have sore shoulders from carrying me all the time 😂).</p>
-  <p>If you can’t get 3 referrals in your first week, you can walk away—no hard feelings. Your earned commissions will be waiting for you once Stripe’s trust period is over. It’s all about building trust and making sure everyone gets paid, every day, forever.</p>
-  <p>Jump in, get started, and let Rizzos AI do the work. The only thing you risk is missing out!</p>
-  </strong>
-  </div>
-  <!-- Affiliate Tools: Referral Link Generator & Earnings Calculator -->
-  <div class="gifts" style="margin-top:2rem; background:#e3e8ee; border:2px solid #b8c7d1;">
-    <h2 style="color:#232f3e;">Affiliate Tools</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:2.5rem; align-items:stretch; justify-content:center; flex-wrap:wrap;">
-      <!-- Referral Link Generator -->
-      <div
-        style="flex:1 1 320px; min-width:280px; max-width:400px; background:#f9f9f9; border-radius:10px; padding:1.5rem; box-shadow:0 2px 8px rgba(35,47,62,0.06); margin-bottom:1rem;">
-        <h3 style="color:#232f3e; margin-top:0;">Get Your Referral Link</h3>
-        <div style="display:flex; flex-wrap:wrap; gap:0.7rem; align-items:center; justify-content:center;">
-          <input id="affiliateCode" type="text" placeholder="Enter your affiliate code"
-            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; min-width:120px;">
-          <button onclick="generateReferralLink()"
-            style="padding:0.7rem 1.2rem; border-radius:6px; background:#232f3e; color:#fff; font-weight:bold; border:none; cursor:pointer;">Generate</button>
+    <div class="container">
+        <h1>Welcome to the Rizzo Affiliate Revolution!</h1>
+        <p>Are you tired of boring, complicated compensation plans that make you feel like you need a PhD in math just to get paid? <br>
+        Do you want a program that’s simple, powerful, and—dare we say—brilliant?</p>
+        <h2>How Does It Work?</h2>
+        <ul>
+            <li><strong>First sale:</strong> Goes to your new recruit. They get a taste of success. Nice!</li>
+            <li><strong>Second sale:</strong> <span style="color:#2e8b57;font-weight:bold;">BOOM!</span> That one is passed up to you, the sponsor. It’s like a surprise party, but with money.</li>
+            <li><strong>Third sale and beyond:</strong> All go to your recruit. They’re happy, you’re happy, everyone’s happy.</li>
+        </ul>
+        <div class="funny">Imagine this: You refer Bob. Bob refers Sally. Sally’s second sale? That’s yours. Bob’s second sale? Also yours. It’s like a sitcom where every punchline is a payout.</div>
+        <h2>The Levels: Choose Your Destiny</h2>
+        <div class="levels">
+            <div class="level">
+                <h3>$29 Level</h3>
+                <div class="price">$29</div>
+                <div class="earnings">10 referrals = <strong>$290/day</strong></div>
+            </div>
+            <div class="level">
+                <h3>$99 Level</h3>
+                <div class="price">$99</div>
+                <div class="earnings">10 referrals = <strong>$990/day</strong></div>
+            </div>
+            <div class="level">
+                <h3>$500 Level</h3>
+                <div class="price">$500</div>
+                <div class="earnings">10 referrals = <strong>$5,000/day</strong></div>
+            </div>
         </div>
-        <div
-          style="display:flex; flex-wrap:wrap; gap:0.7rem; align-items:center; justify-content:center; margin-top:0.7rem;">
-          <input id="referralLink" type="text" readonly
-            style="padding:0.7rem 1rem; border-radius:6px; border:1px solid #bbb; font-size:1rem; min-width:180px; background:#f9f9f9;"
-            placeholder="Your referral link will appear here">
-          <button onclick="copyReferralLink()"
-            style="padding:0.7rem 1.2rem; border-radius:6px; background:#ffa500; color:#232f3e; font-weight:bold; border:none; cursor:pointer;">Copy</button>
+        <h2>Compensation Diagram</h2>
+        <div class="diagram">
+            <!-- Placeholder for a tree diagram graphic -->
+            <img src="https://raw.githubusercontent.com/rizzosai/backoffice/main/affiliate-tree-diagram.png" alt="Affiliate Tree Diagram">
+            <div style="margin-top:1em;">Every second sale from your team is passed up to you. The more you help your team, the more you earn!</div>
         </div>
-        <p style="font-size:0.93rem; color:#888; margin-top:0.7rem;">Share your unique link to earn
-          commissions!<br>Example: <span
-            style="color:#232f3e; font-weight:bold;">https://rizzosai.com/?ref=YOURCODE</span></p>
-      </div>
+        <div class="notice">
+            <strong>Level Up Rule:</strong> If someone you refer joins at a higher level than you, their payment goes to the owner. <br>
+            Rizzo’s rule: “If you don’t like the rules, don’t play. Simple as that.”
+        </div>
+        <h2>Why Is This Genius?</h2>
+        <ul>
+            <li>Rewards you for building a team and helping your people succeed.</li>
+            <li>Keeps the money flowing up the tree—every second sale is pure gold.</li>
+            <li>Designed by Rizzo himself, who spent years dodging affiliate nonsense to create the ultimate override system.</li>
+        </ul>
+        <div class="cta">
+            <strong>Ready to Get Started?</strong><br>
+            Don’t wait. Don’t hesitate. Don’t let your second sale slip away.<br>
+            <span style="font-size:1.2em;">Join the Rizzo Affiliate Revolution today—where every second sale is a brilliant idea, and every day is payday.</span>
+        </div>
     </div>
-  </div>
-
-  <script>
-    function generateReferralLink() {
-      var code = document.getElementById('affiliateCode').value.trim();
-      var link = '';
-      if (code) {
-        link = 'https://rizzosai.com/?ref=' + encodeURIComponent(code);
-      }
-      document.getElementById('referralLink').value = link;
-    }
-    function copyReferralLink() {
-      var link = document.getElementById('referralLink');
-      if (link.value) {
-        link.select();
-        link.setSelectionRange(0, 99999);
-        document.execCommand('copy');
-        alert('Referral link copied to clipboard!');
-      }
-    }
-    function calcEarnings() {
-      var tier1 = parseInt(document.getElementById('numSales').value) || 0;
-      var tier2 = parseInt(document.getElementById('tier2Sales').value) || 0;
-      var amount = parseFloat(document.getElementById('saleAmount').value) || 0;
-      var tier1Earnings = tier1 * amount * 0.7;
-      var tier2Earnings = tier2 * amount * 0.1;
-      var total = tier1Earnings + tier2Earnings;
-      var msg = '';
-      msg += 'You earn $' + tier1Earnings.toFixed(2) + ' from your direct sales (Tier 1). ';
-      msg += 'You earn $' + tier2Earnings.toFixed(2) + ' from your downline sales (Tier 2). ';
-      msg += 'Total earnings: $' + total.toFixed(2);
-      document.getElementById('earningsResult').textContent = msg;
-    }
-  </script>
-  <div class="as-seen">
-    <span>As seen on:</span>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/YouTube_social_white_squircle.svg" alt="YouTube" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" alt="Google" />
-  </div>
-  <div class="story">
-    <h2>Why Go It Alone? Join the Rizzos AI Movement!</h2>
-    <p>Let’s be real: trying to make money online by yourself is like selling invisible socks—nobody sees you, and nobody buys! <span class="laugh">(That’s 1!)</span> But here’s the thing: Rizzos AI is run by smart automation and a community that actually wants you to win. If you’re not in, you’re missing out on the kind of opportunity that only comes around once in a blue moon (or when Rizzo gets a new idea!).</p>
-    <p>People in our chat room are saying, “Gee, I’m glad I know Rizzo—he’s the best thing since sliced bread!” And honestly, you’d have to be crazy to pass this up. The only person who’d skip this is someone who doesn’t like money—and I don’t know anyone who doesn’t like money!</p>
-    <p>Our compensation plan is so good, it practically throws cash at you. Imagine getting your first signups with zero effort, thanks to our AI and team advertising. You get paid, your friends get paid, and even your grandma will want in (she’ll probably ask you to show her how to use the internet first, though).</p>
-    <p>But what if you had a whole crew behind you, sharing your site on Facebook, Twitter, YouTube, Instagram, Pinterest, and more? Suddenly, you’re everywhere! <span class="laugh">(That’s 2!)</span> You’ll be the talk of the town—and the internet.</p>
-    <p>At Rizzos AI, we’re building a real community. Whether you’re just dipping your toes in or ready to cannonball, there’s a package for every size and ambition. The little people can get in, but don’t be surprised if you find yourself growing fins and a taste for bigger fish. And let’s be honest: I only take a sliver off the top—just enough to keep the servers humming and my coffee cup full. (If you think that’s unfair, remember: even GitHub takes a cut, and they didn’t come up with this idea!)</p>
-    <p>This isn’t like your grandma up at midnight tweeting “I’m a whore” to everybody—this is fun-loving stuff, like waking up every morning and singing, “I got cash in my bank, dada!”</p>
-    <p>Stick with us, and together we’ll build something so big, people will be itching to give us their lunch money just to join the party. (Seriously, I’ve seen it happen. Bring snacks.)</p>
-    <p>If you want to laugh, learn, and get seen by thousands, Rizzos AI is your new home. You’d be crazy not to take this opportunity—unless you don’t like money, and I’ve never met anyone like that! Let’s make magic happen—together! <span class="laugh">(That’s 5!)</span></p>
-  </div>
-  <div class="testimonial">
-    <h2>What People Are Saying</h2>
-    <p>“I laughed so hard, I nearly dropped my phone. And then I made my first $100 online—thanks, Rizzo!”</p>
-    <div class="author">— Jamie L., Happy Customer</div>
-  </div>
-  <div class="gifts">
-    <h2>What You Get as a Rizzos AI Member</h2>
-    <div class="gifts-list">
-      <div class="gift-item"><span class="gift-icon">🎁</span>Exclusive eBook: Real Ways to Make Money Online</div>
-      <div class="gift-item"><span class="gift-icon">💡</span>Affiliate Marketing Cheat Sheet</div>
-      <div class="gift-item"><span class="gift-icon">🛠️</span>Top 10 Passive Income Tools</div>
-      <div class="gift-item"><span class="gift-icon">🌐</span>Automated Simple Website Built For You (with your name &
-        niche!)</div>
-      <div class="gift-item"><span class="gift-icon">�</span>Personalized Keyword Research & SEO Plan</div>
-      <div class="gift-item"><span class="gift-icon">📝</span>Step-by-step Notepad Instructions for Growing Your Site
-      </div>
-      <div class="gift-item"><span class="gift-icon">�🔒</span>Bonus: Secret Resource Vault</div>
-      <div class="gift-item"><span class="gift-icon">🌐</span>Your website featured on all my social media & site</div>
-      <div class="gift-item"><span class="gift-icon">🤝</span>Community support & ongoing training</div>
-  <div class="gift-item"><span class="gift-icon">💸</span>Earn 70% on your direct signups. The first referral from each member goes to you (the sponsor), and the next referral goes to King 2 (the person who brought you in) as an override bonus!</div>
-      <div class="gift-item"><span class="gift-icon">🔗</span>Access to our exclusive, members-only chat room</div>
-      <div class="gift-item"><span class="gift-icon">🤖</span>24/7 AI Chatbot for instant help—no waiting for support!
-      </div>
-      <div class="gift-item"><span class="gift-icon">🚀</span>For $1000 & $5000 Tiers: Full "How I Automated My Business
-        with AI" Guide + 1-on-1 Coaching</div>
-      <div class="gift-item"><span class="gift-icon">🎉</span>And more surprises from Rizzo!</div>
-    </div>
-    <p><strong>Warning:</strong> Your phone or computer may be so full of Rizzo’s gifts and traffic, you’ll need a
-      bigger hard drive!</p>
-  </div>
-  <div class="cta">
-    <h2>Ready to Join Rizzo’s Riches?</h2>
-    <div class="gifts" style="margin:1.5rem 0; background:#e3ffe3; border:2px solid #6c6;">
-      <h3 style="color:#228B22;">Important Update: 7-Day Payment Hold</h3>
-      <p>Hey future Rizzos AI legends! Quick heads-up: Stripe (our payment processor) wants to make sure I’m not secretly a rockstar scammer before they let me send instant payouts. It’s all about building trust—just like making friends, but with more paperwork and fewer snacks.</p>
-      <p>Now, I’m no rookie when it comes to internet marketing—I’ve been around the block more times than a pizza delivery guy. But believe it or not, I only found out about Stripe last night! Turns out, they’re pretty serious about making sure everything’s legit.</p>
-      <p>So, here’s the deal: For the first 7 days, payouts will be held while Stripe gets to know us. You can still join, pay, and start building your network right away—your empire begins today! You’ll see your earnings stacking up, but the cash-out button will unlock after the 7-day trust period (or sooner, if Stripe falls in love with us fast).</p>
-      <p>Don’t worry, you won’t be charged again until the 7 days are up. Use this time to build your team, share your link, and get ready for the big payout party. Once Stripe gives us the green light, it’s instant payments for everyone—no more waiting!</p>
-  <p>If you’re cool with a little patience, you’ll be first in line when the floodgates open. And when the 7 days are up, we’re throwing a real party at Red Rock’s place—and I’ll shout one, two, or maybe three kegs, depending on how many show up!</p>
-      <p>Thanks for understanding—let’s show Stripe what a real community looks like!</p>
-    </div>
-    <p><strong>Don’t wait!</strong> This is a true community—no outsiders, no spam, just real people helping each other
-      succeed. <b>We’ll get you your first 2 signups by advertising your link on all our social media (over 500,000
-        views/month) until you have them!</b> After that, you earn <b>70% commission on your direct signups</b>. <b>The first referral from each member goes to you (the sponsor), and the next referral goes to King 2 (the person who brought you in) as an override bonus!</b> Every member gets a website, keyword research, and a personal action plan—done for
-      you! Higher tiers get my full AI automation playbook and coaching. Plus, our AI chatbot and open chat room mean
-      you’re never alone on your journey!
-    </p>
-    <!-- Subscription Confirmation Email Template -->
-    <div class="gifts" style="margin-top:2rem; background:#fffbe6; border:2px solid #ffa500;">
-      <h2 style="color:#d35400;">Subscription Confirmation Email (For Affiliates Only)</h2>
-      <p>Hi [Name],</p>
-      <p>Welcome to Rizzo’s Riches! You’re officially part of the affiliate community—only affiliates can join, so you’re in the club!</p>
-      <p>To activate your membership and get paid, use the payment links below:</p>
-      <ul>
-        <li><b>Pay with Card (Stripe):</b> <a href="https://buy.stripe.com/3cIfZichMglddoS1rofjG09" target="_blank">Starter</a> | <a href="https://buy.stripe.com/5kQcN681w1qj4Sm8TQfjG0b" target="_blank">Pro</a> | <a href="https://buy.stripe.com/14A9AU6Xs6KD3Oi0nkfjG0a" target="_blank">Elite</a></li>
-        <li><b>Pay with Crypto (USDT Avax-C):</b> <span style="font-family:monospace; color:#1976d2;">0xed6aabdc5dff3a2a754653dc8b1a9173ba0dd053</span></li>
-      </ul>
-  <p>Once you’ve paid, you’ll get instant access to your dashboard, guides, and referral tools. If you have any questions, reply to this email or contact <a href="mailto:ai@rizzosai.com">ai@rizzosai.com</a>.</p>
-      <p style="color:#d32f2f;font-weight:bold;">Note: Only affiliates can join and get paid. If you’re not an affiliate, you’ll need to sign up through an existing member’s referral link!</p>
-      <p>Let’s make magic happen—together!</p>
-      <p>— Rizzo</p>
-    </div>
-    <!-- Payment Options Section -->
-    <div class="payment-options" style="margin:2rem 0; text-align:center;">
-      <!-- Payment options removed as requested -->
-    </div>
-  <p style="font-size:0.95rem; color:#888; margin-top:2rem;">Affiliate Model: 70% for your direct signups. The first referral from each member goes to you (the sponsor), and the next referral goes to King 2 (the person who brought you in) as an override bonus. We guarantee your first 2 signups by advertising your link on our high-traffic social media pages (500,000+ views/month).</p>
-  </div>
-  <div class="gifts" style="margin-top:2rem; background:#fff7e6; border:2px solid #ffa500;">
-    <h2 style="color:#ff8800;">Community Chat Room & 24/7 AI Support</h2>
-    <p>Our exclusive chat room is open to all members—talk about your wins, your struggles, or just hang out. No bars,
-      no limits, just real talk. And if you need help, our AI chatbot is always online to answer your questions, so you
-      can focus on growing (and relaxing) while the community and automation do the work!</p>
-  </div>
-
-  <div class="gifts" style="margin-top:2rem; background:#e3ffe3; border:2px solid #6c6;">
-    <h2 style="color:#228B22;">100% Money-Back Guarantee</h2>
-    <p>Try Rizzo’s Riches risk-free! If you’re not absolutely thrilled with your website, keyword plan, or the
-      community, just let us know within 30 days and you’ll get a full refund. No questions asked, no hard feelings.
-      That’s how confident we are in the value you’ll get!</p>
-  </div>
-
-  <!-- The backlinking and automation is now woven throughout the page as part of the Rizzos AI community offer. -->
-
-  <div class="gifts" style="margin-top:2rem; background:#f9f9f9; border:2px solid #bbb;">
-    <h2 style="color:#232f3e;">Privacy Policy</h2>
-    <p><strong>Your privacy matters to us.</strong> We collect only the information you provide when you sign up (such
-      as your name, email, and payment details). This information is used solely to deliver your membership, process
-      payments, and provide support. We do not sell or share your personal information with third parties, except as
-      required to process payments (e.g., Stripe) or comply with the law.</p>
-    <p><strong>Facebook Login:</strong> When you log in with Facebook, we only request your name and email address. We do not collect, store, or use your Facebook ID or any other sensitive data. Your information is used solely to verify your identity and provide secure access to your back office. We never share your data with anyone, and we do not use it for marketing or tracking purposes.</p>
-    <p>We use cookies and analytics to improve your experience and track affiliate referrals. By using this site, you
-      consent to our use of cookies.</p>
-    <p>If you have any questions or want your data deleted, just contact us at <a
-  href="mailto:ai@rizosai.com">ai@rizosai.com</a>. <br><span style="color:#228B22;font-size:0.98em;">All emails will be answered in a timely manner.</span></p>
-    <p>This policy may be updated from time to time. Please check back for changes.</p>
-    <!-- $10 ADMIN FEE box moved from top to here -->
-    <!-- $10 admin fee box and policy removed as requested -->
-  </div>
 </body>
-<!-- Rewardful Affiliate Tracking -->
-<script>(function (w, r) { w._rwq = r; w[r] = w[r] || function () { (w[r].q = w[r].q || []).push(arguments) } })(window, 'rewardful');</script>
-<script async src='https://r.wdfl.co/rw.js' data-rewardful='4feba8'></script>
-</body>
-
 </html>
